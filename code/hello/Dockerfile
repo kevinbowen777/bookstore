@@ -1,5 +1,5 @@
 # Pull base image
-From python:3.10
+FROM python:3.10
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -12,4 +12,5 @@ WORKDIR /code
 COPY .env Pipfile Pipfile.lock /code/
 RUN pip install pipenv && pipenv install --system
 
-# COPY . /code/
+# Copy project
+COPY . /code/
