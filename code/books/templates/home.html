@@ -5,8 +5,9 @@
 
 {% block content %}
   <h1>Homepage</h1>
+  <img class="bookcover" src="{% static 'images/dfp.png' %}">
   {% if user.is_authenticated %}
-    Hi {{ user.email }}. Thanks for logging in.
+    <p>Hi {{ user.email }}. Thanks for logging in.
     <p><a href="{% url 'logout' %}">Log Out</a></p>
   {% else %}
     <p>You are not logged in</p>
