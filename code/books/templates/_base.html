@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>{% block title %}Bookstore{% endblock title %}</title>
+    <!-- CSS -->
     <link rel='stylesheet' href="{% static 'css/base.css' %}">
   </head>
   <body>
@@ -11,5 +12,7 @@
       {% block content %}
       {% endblock content %}
     </div>
+    <!-- JavaScript -->
+    <script src="{% static 'js/base.js' %}"></script>
   </body>
 </html>
