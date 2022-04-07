@@ -9,6 +9,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
 
     # Local applications
-    path('accounts/', include('accounts.urls')),
     path('', include('pages.urls')),
 ]
