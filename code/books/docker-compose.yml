@@ -10,6 +10,8 @@ services:
       - 8000:8000
     depends_on:
       - db
+    environment:
+      - "SECURE_SSL_REDIRECT=False"
   db:
     image: postgres:11
     volumes:
