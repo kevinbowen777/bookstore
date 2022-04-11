@@ -11,6 +11,7 @@ services:
     depends_on:
       - db
     environment:
+      - "DEBUG=True"
       - "SECURE_SSL_REDIRECT=False"
   db:
     image: postgres:11
