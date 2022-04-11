@@ -1,6 +1,7 @@
 # updated 20220207
 # from: https://github.com/github/gitignore
 #
+docker-compose-prod.yml
 app.db
 .idea/
 logs/
