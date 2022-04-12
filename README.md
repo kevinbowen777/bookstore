@@ -1,7 +1,10 @@
-## bookstore - A web application built on the Django web framework
+## bookstore - A web application built with Docker and Django web framework
 
 ---
 ## Features
+ - add book reviews
+ - upload book covers
+ - basic search capability
  - email verification for account registration & password/email change
 
 ### Live Demo on Heroku:
