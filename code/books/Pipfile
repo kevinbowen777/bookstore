@@ -11,6 +11,7 @@ django-allauth = "*"
 environs = {extras = ["django"], version = "*"}
 pillow = "*"
 django-debug-toolbar = "*"
+whitenoise = "*"
 
 [dev-packages]
 flake8 = "*"
