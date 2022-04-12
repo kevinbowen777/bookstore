@@ -12,6 +12,7 @@ environs = {extras = ["django"], version = "*"}
 pillow = "*"
 django-debug-toolbar = "*"
 whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 flake8 = "*"
