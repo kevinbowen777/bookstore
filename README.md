@@ -6,6 +6,14 @@
  - upload book covers
  - basic search capability
  - email verification for account registration & password/email change
+ - uses django-debug-toolbar in DEBUG mode
+
+### Installation
+ - `git clone https://github.com/kevinbowen777/bookstore.git`
+ - `docker-compose up --build`
+ - `docker-compose exec web python manage.py migrate`
+ - `docker-compose exec web python manage.py createsuperuser`
+ - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
 ### Live Demo on Heroku:
  - https://still-escarpment-90214.herokuapp.com/
