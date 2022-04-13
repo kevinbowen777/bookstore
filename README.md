@@ -22,6 +22,9 @@
 ### Search Results
 ![Search Results](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_search-results.png)
 
+### Book detail with reviews
+![Book detail](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_detail-review.png)
+
 ---
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/bookstore/blob/master/LICENSE)
 ---
