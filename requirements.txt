@@ -43,6 +43,7 @@ friendly==0.5.14
 friendly-styles==0.1
 friendly-traceback==0.5.29
 gufw==21.4.0
+html2text==2020.1.16
 html5lib==1.1
 idna==3.3
 importlib-metadata==4.11.2
