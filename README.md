@@ -25,6 +25,9 @@
 ### Book detail with reviews
 ![Book detail](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_detail-review.png)
 
+### Book detail with django-debug-toolbar
+![Detail debug-toolbar](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_booklist_debug-toolbar.png)
+
 ---
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/bookstore/blob/master/LICENSE)
 ---
