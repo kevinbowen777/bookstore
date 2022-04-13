@@ -16,8 +16,11 @@
 ---
 ## Screenshots
 
+### Home
+![Home](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_home.png)
+
 ### Search Results
-![Profile](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_search-results.png)
+![Search Results](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_search-results.png)
 
 ---
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/bookstore/blob/master/LICENSE)
