@@ -2,11 +2,17 @@
 # from: https://github.com/github/gitignore
 #
 docker-compose-prod.yml
+
+# eslint install
+node_modules
+package-lock.json
+package.json
+
 app.db
 .idea/
 logs/
-# Redis dump file
-dump.rdb
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
