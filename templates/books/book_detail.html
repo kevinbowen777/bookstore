@@ -4,12 +4,15 @@
 
 {% block content %}
   <div class="book-detail">
+    <p>
+    <h2><a href="">{{ book.title }}</a></h2>
     {% if book.cover %}
       <img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">
     {% endif %}
-    <h2><a href="">{{ book.title }}</a></h2>
-    <p>Author: {{ book.author }}</p>
-    <p>Price: {{ book.price }}</p>
+    <ul style="list-style-type:none;">
+      <li>Author: {{ book.author }}</li>
+      <li>Price: {{ book.price }}</li>
+    </ul>
     <div>
       <h3>Reviews</h3>
       <ul>
@@ -18,5 +21,6 @@
         {% endfor %}
       </ul>
     </div>
+    </p>
   </div>
 {% endblock content %}
