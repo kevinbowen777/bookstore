@@ -1,165 +1,43 @@
-anytree==2.8.0
-apparmor==3.0.4
-appdirs==1.4.4
-application-utility==1.3.2
-astroid==2.10.0
-asttokens==2.0.5
-attrs==21.4.0
-backcall==0.2.0
-Beaker==1.11.0
-black==22.1.0
-btrfsutil==5.16.2
-CacheControl==0.12.10
-cachy==0.3.0
-catfish==4.16.3
-ceph==1.0.0
-ceph-volume==1.0.0
-cephfs==2.0.0
-cephfs-shell==0.0.1
-certifi==2021.10.8
-cffi==1.15.0
-chardet==4.0.0
-charset-normalizer==2.0.12
-cleo==0.8.1
-click==8.0.4
-clikit==0.6.2
-colorama==0.4.4
-commonmark==0.9.1
-configobj==5.1.0.dev0
-contextlib2==0.6.0.post1
-crashtest==0.3.1
-cryptography==36.0.1
-decorator==5.1.1
-distlib==0.3.4
-distro==1.7.0
-dnspython==2.2.0
-docopt==0.6.2
-docutils==0.16
-entrypoints==0.4
-executing==0.8.2
-filelock==3.6.0
-flake8==4.0.1
-friendly==0.5.14
-friendly-styles==0.1
-friendly-traceback==0.5.29
-gufw==21.4.0
-html2text==2020.1.16
-html5lib==1.1
-idna==3.3
-importlib-metadata==4.11.2
-ipython==8.1.1
-ipython-genutils==0.2.0
-isort==5.10.1
-jedi==0.18.1
-jeepney==0.7.1
-Jinja2==3.0.3
-jsonschema==3.2.0
-keyring==23.4.0
-keyrings.alt==4.1.0
-keyutils==0.6
-lark-parser==0.12.0
-lazy-object-proxy==1.7.1
-lensfun==0.3.3
-LibAppArmor==3.0.4
-lightdm-gtk-greeter-settings==1.2.2
-lit==13.0.1.dev0
-lockfile==0.12.2
-louis==3.21.0
-lxml==4.7.1
-Mako==1.1.6
-manjaro-sdk==0.1
-Markdown==3.3.6
-Markups==3.1.3
-MarkupSafe==2.0.1
-matplotlib-inline==0.1.3
-mccabe==0.7.0
-meld==3.20.4
-menulibre==2.2.3
-more-itertools==8.10.0
-msgpack==1.0.3
-mugshot==0.4.3
-mutagen==1.45.1
-mypy-extensions==0.4.3
-netsnmp-python==1.0a1
-npyscreen==4.10.5
-ordered-set==4.0.2
-packaging==20.9
-pacman-mirrors==4.23.2
-parso==0.8.2
-pastel==0.2.1
-pathspec==0.9.0
-pbr==5.8.0
-pep517==0.12.0
-pexpect==4.8.0
-pickleshare==0.7.5
-Pillow==9.0.1
-pip-check==2.7
-pipenv==2022.1.8
-pkgconfig==1.5.5
-pkginfo==1.7.1
-platformdirs==2.5.1
-ply==3.11
-poetry==1.1.13
-poetry-core==1.0.8
-powerline-status==2.8.2
-progress==1.6
-prompt-toolkit==3.0.28
-psutil==5.9.0
-ptyprocess==0.7.0
-pure-eval==0.2.1
-pycairo==1.20.1
-pycodestyle==2.8.0
-pycparser==2.21
-pyenchant==3.2.2
-pyflakes==2.4.0
-Pygments==2.11.2
-PyGObject==3.42.0
-pylev==1.4.0
-pylint==2.12.2
-pyOpenSSL==21.0.0
-pyparsing==3.0.7
-PyQt5==5.15.6
-PyQt5-sip==12.9.1
-PyQtWebEngine==5.15.5
-pyrsistent==0.18.1
-PySide6==6.2.3
-python-distutils-extra==2.39
-python-markdown-math==0.8
-pyxdg==0.27
-PyYAML==6.0
-rados==2.0.0
-rbd==2.0.0
-requests==2.27.1
-requests-toolbelt==0.9.1
-resolvelib==0.5.5
-ReText==7.2.3
-retrying==1.3.3
-rgw==2.0.0
-rich==11.1.0
-SecretStorage==3.3.1
-shellingham==1.4.0
-shiboken6==6.2.3
-six==1.16.0
-stack-data==0.1.4
-stevedore==3.5.0
-systemd-python==234
-TBB==0.2
-team==1.0
-terminaltables==3.1.10
-toml==0.10.2
-tomli==2.0.0
-tomlkit==0.10.0
-traitlets==5.1.1
-typing-extensions==4.1.0
-udiskie==2.4.2
-ufw==0.36.1
-urllib3==1.26.8
-validate==5.1.0.dev0
-virtualenv==20.13.0
-virtualenv-clone==0.5.7
-virtualenvwrapper==4.8.4
-wcwidth==0.2.5
-webencodings==0.5.1
-Werkzeug==2.0.3
-wrapt==1.13.3
-zipp==3.7.0
+asgiref @ file:///home/kbowen/.cache/pypoetry/artifacts/22/46/4d/e9d170f76cad59b81e4568f6b37cce88f46df63c197e476a1020862182/asgiref-3.5.2-py3-none-any.whl
+certifi @ file:///home/kbowen/.cache/pypoetry/artifacts/8c/ef/5f/67cf35ca016dcd84174e483e20fc3cfcd8bf39b6852e96236e852f31ba/certifi-2022.5.18.1-py3-none-any.whl
+cffi @ file:///home/kbowen/.cache/pypoetry/artifacts/83/2d/1d/ce8e39dc0d50103c8c2c79db5ba461a9817df9d3617a21c6084d32315a/cffi-1.15.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+cfgv @ file:///home/kbowen/.cache/pypoetry/artifacts/35/10/a3/f57b5e70e8b5d5f31bccdd15df3781efda09dc1b44b473591e360c20e5/cfgv-3.3.1-py2.py3-none-any.whl
+charset-normalizer @ file:///home/kbowen/.cache/pypoetry/artifacts/d5/27/31/db4fb74906e3a7f55f720e0079ac1850dd86e30651cdfa5e1f04c53cfa/charset_normalizer-2.0.12-py3-none-any.whl
+cryptography @ file:///home/kbowen/.cache/pypoetry/artifacts/e6/6c/8d/429f00586fc622da8df0c4e55b10028f8c489e830ef5661ca193979d5d/cryptography-37.0.2-cp36-abi3-manylinux_2_24_x86_64.whl
+defusedxml @ file:///home/kbowen/.cache/pypoetry/artifacts/63/7f/1e/b8b316188f0f0704ef8f0eaaad0d3c82dff4aa2495e4e3467479e4ce66/defusedxml-0.7.1-py2.py3-none-any.whl
+distlib @ file:///home/kbowen/.cache/pypoetry/artifacts/c6/c9/9e/cc7bc0747799b29bba3f47bcb03116150430ae8e40a7477a11ff4fdc11/distlib-0.3.4-py2.py3-none-any.whl
+dj-database-url @ file:///home/kbowen/.cache/pypoetry/artifacts/4d/45/5f/ecd99aa66306968dc0a97beb09e86273947cb94400fddfa1d308d10331/dj_database_url-0.5.0-py2.py3-none-any.whl
+dj-email-url @ file:///home/kbowen/.cache/pypoetry/artifacts/fb/80/72/5f336118db261fef4a879bf50d3cb4ff747dd1d2a610b14b60a532b307/dj_email_url-1.0.5-py2.py3-none-any.whl
+Django @ file:///home/kbowen/.cache/pypoetry/artifacts/bc/eb/c7/9de0e5ba3f75f2216e177fb6788e183cf501da3c89b082ff913a5b3176/Django-4.0.4-py3-none-any.whl
+django-allauth @ file:///home/kbowen/.cache/pypoetry/artifacts/e8/e3/ca/eabfcaccbd7463bdfdc907c41391e06a079da9ac3e82e15ab080effe38/django-allauth-0.50.0.tar.gz
+django-cache-url @ file:///home/kbowen/.cache/pypoetry/artifacts/44/fe/76/672cde12e39eff568c07ca2c62db97f751c6ead8c52b1f3b181828b6b5/django_cache_url-3.4.0-py2.py3-none-any.whl
+django-crispy-forms @ file:///home/kbowen/.cache/pypoetry/artifacts/65/70/63/5f29784a52afb2f52f626239ac6d86ddae9cc1862bdc3a4c11983240b0/django_crispy_forms-1.14.0-py3-none-any.whl
+django-debug-toolbar @ file:///home/kbowen/.cache/pypoetry/artifacts/94/ae/be/fe93b81a7fb98f872f9c497d11413ec86918ccc112396dd1e21531aa3c/django_debug_toolbar-3.4.0-py3-none-any.whl
+environs @ file:///home/kbowen/.cache/pypoetry/artifacts/03/3a/2c/b1c48821c153bd40186099cd1e72d6a8b15023ae6caa88f771d6055c32/environs-9.5.0-py2.py3-none-any.whl
+filelock @ file:///home/kbowen/.cache/pypoetry/artifacts/84/60/69/c30f7121d4fe6cf681b6bd4f1067444b589e80d51371828be1c38b6751/filelock-3.7.0-py3-none-any.whl
+gunicorn @ file:///home/kbowen/.cache/pypoetry/artifacts/9f/68/9f/f1166be9473b4fe2cc59c98fac616db1f94b18662b9055d1ac940374e3/gunicorn-20.1.0-py3-none-any.whl
+identify @ file:///home/kbowen/.cache/pypoetry/artifacts/1e/cd/62/ff3de9694f18ce965eb5937b2c2fad0c6bd51e46ab03bb74cbfba7db44/identify-2.5.1-py2.py3-none-any.whl
+idna @ file:///home/kbowen/.cache/pypoetry/artifacts/90/36/8c/81eabf6ac88608721ab27f439c9a6b9a8e6a21cc58c59ebb1a42720199/idna-3.3-py3-none-any.whl
+isort @ file:///home/kbowen/.cache/pypoetry/artifacts/12/e3/f1/e8e484225dcc659de6e4ac34a4ad996cb71f36119e54e71462cc7ad7e8/isort-5.10.1-py3-none-any.whl
+marshmallow @ file:///home/kbowen/.cache/pypoetry/artifacts/9b/86/b1/380be036666ca2f50dc8ccb0432607585f22c309b90eccb77ada1140e6/marshmallow-3.15.0-py3-none-any.whl
+nodeenv @ file:///home/kbowen/.cache/pypoetry/artifacts/41/0a/a7/9f3b1a3b2b48691106e0b8583dc2e38ccb0543a3106bcc508d3b96d5a6/nodeenv-1.6.0-py2.py3-none-any.whl
+oauthlib @ file:///home/kbowen/.cache/pypoetry/artifacts/95/e6/47/7094c27bbb7f2ce2e9f1aaa01594e6a57184c3f861abe85623bded8680/oauthlib-3.2.0-py3-none-any.whl
+packaging @ file:///home/kbowen/.cache/pypoetry/artifacts/d3/1f/90/3f2473250ebd055fe7f0856810677783949fc0d2e5f25bbb4dc00ad0a9/packaging-21.3-py3-none-any.whl
+Pillow @ file:///home/kbowen/.cache/pypoetry/artifacts/70/04/3b/b6cdfa83c897722b9b8898b6d4f2d99c2e4545942a8485c1c9f3252cc0/Pillow-9.1.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+platformdirs @ file:///home/kbowen/.cache/pypoetry/artifacts/ea/8e/52/e5ac2f14474cef8f0fd44b4aa7d6968bfa89442d1b88ab567c446eae70/platformdirs-2.5.2-py3-none-any.whl
+pre-commit @ file:///home/kbowen/.cache/pypoetry/artifacts/63/52/6c/ddd6da0230dc197ad84dc4163cddc7ab075eafc9ed7b7262ba30902413/pre_commit-2.19.0-py2.py3-none-any.whl
+psycopg2-binary @ file:///home/kbowen/.cache/pypoetry/artifacts/a6/25/b7/4f1a80a76aa49d103fb5309d65548527163d0e1848c6fb216d3602579c/psycopg2_binary-2.9.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+pycparser @ file:///home/kbowen/.cache/pypoetry/artifacts/08/b1/1b/4618699096207aa9eba9fa35118b2b6544fd1c9c2a79ea3601a3d325a0/pycparser-2.21-py2.py3-none-any.whl
+PyJWT @ file:///home/kbowen/.cache/pypoetry/artifacts/52/b6/64/671139dabf2879c6a0aa3887212be6f47753d1d97ea1b7644f6103e0c9/PyJWT-2.4.0-py3-none-any.whl
+pyparsing @ file:///home/kbowen/.cache/pypoetry/artifacts/e1/09/c0/6a6df3ef412eb19fcda1b353ea54e3b48f9c518348fadd0967a962cbb6/pyparsing-3.0.9-py3-none-any.whl
+python-dotenv @ file:///home/kbowen/.cache/pypoetry/artifacts/03/b3/0a/614098987b7913fdcbdc5e81af3d9b7deecbb2d3802ad78521603deb1e/python_dotenv-0.20.0-py3-none-any.whl
+python3-openid @ file:///home/kbowen/.cache/pypoetry/artifacts/66/ab/d6/f2023137055f6493c632ca6595d67702076ab7b46e888adb677f2080af/python3_openid-3.2.0-py3-none-any.whl
+PyYAML @ file:///home/kbowen/.cache/pypoetry/artifacts/72/40/79/b7f82de66d678bc8de004df69ca112b99a38e71beff3aef6c4e2349303/PyYAML-6.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+requests @ file:///home/kbowen/.cache/pypoetry/artifacts/d2/b2/c6/a04ce59140c6739203837d8dd0f518e29051b7ab61d2f34d4fd4241d30/requests-2.27.1-py2.py3-none-any.whl
+requests-oauthlib @ file:///home/kbowen/.cache/pypoetry/artifacts/80/d7/d7/c91b9cd3edf751cf664d93c1376619758fc1080396ad1e76f5aaf274bb/requests_oauthlib-1.3.1-py2.py3-none-any.whl
+six @ file:///home/kbowen/.cache/pypoetry/artifacts/89/b2/f8/fd92b6d5daa0f8889429b2fc67ec21eedc5cae5d531ee2853828ced6c7/six-1.16.0-py2.py3-none-any.whl
+sqlparse @ file:///home/kbowen/.cache/pypoetry/artifacts/10/f5/22/c9c991a71e27c4d8f69907d92cce74a369cbb3183dc4a6d27e2ae4ab0b/sqlparse-0.4.2-py3-none-any.whl
+toml @ file:///home/kbowen/.cache/pypoetry/artifacts/51/ac/24/674da558495229c57c3d2333cb23e24aac7aadf723ced29e2cc41a9e6e/toml-0.10.2-py2.py3-none-any.whl
+urllib3 @ file:///home/kbowen/.cache/pypoetry/artifacts/88/1c/d5/a55ed0245e5d7cd3a9f40dd75733644cbf7b7d94a6c521eb6c027a326c/urllib3-1.26.9-py2.py3-none-any.whl
+virtualenv @ file:///home/kbowen/.cache/pypoetry/artifacts/3f/58/e0/9b3dd7536acdbfaa9970eba1de68906a2c2338fbe9b051567b9505fe39/virtualenv-20.14.1-py2.py3-none-any.whl
+whitenoise @ file:///home/kbowen/.cache/pypoetry/artifacts/9c/30/89/76fbee8b0326260cb169c67765c5aa394343d907066272e881f429eb11/whitenoise-6.1.0-py3-none-any.whl
