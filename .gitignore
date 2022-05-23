@@ -3,6 +3,7 @@
 #
 LOCAL_APP_NOTES
 docker-compose-prod.yml
+bookstore.sqlite3
 
 # eslint install
 node_modules
