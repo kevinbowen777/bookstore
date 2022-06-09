@@ -1,5 +1,5 @@
 [tool.black]
-line-length = 119
+line-length = 79
 # include =
 exclude = '''
 /(
@@ -43,7 +43,7 @@ profile = "black"
 multi_line_output = 3
 skip = ["*.gitignore"]
 extend_skip = ["*.md", "*.json"]
-line_length = 119
+line_length = 79
 
 [tool.poetry]
 name = "bookstore"

@@ -9,9 +9,13 @@ from .models import Book, Review
 class BookTests(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(
-            username="reviewuser", email="reviewuser@email.com", password="testpass123"
+            username="reviewuser",
+            email="reviewuser@email.com",
+            password="testpass123",
         )
-        self.special_permission = Permission.objects.get(codename="special_status")
+        self.special_permission = Permission.objects.get(
+            codename="special_status"
+        )
         self.book = Book.objects.create(
             title="Learning Python",
             author="Mark Lutz",
@@ -40,8 +44,12 @@ class BookTests(TestCase):
         self.client.logout()
         response = self.client.get(reverse("book_list"))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, "%s?next=/books/" % (reverse("account_login")))
-        response = self.client.get("%s?next=/books/" % (reverse("account_login")))
+        self.assertRedirects(
+            response, "%s?next=/books/" % (reverse("account_login"))
+        )
+        response = self.client.get(
+            "%s?next=/books/" % (reverse("account_login"))
+        )
         self.assertContains(response, "Log In")
 
     def test_book_detail_view_with_permissions(self):
