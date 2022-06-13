@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "debug_toolbar",
+    "django_extensions",
     # Local
     "accounts",
     "pages",
