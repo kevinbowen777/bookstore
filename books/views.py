@@ -2,7 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 from django.views.generic import CreateView, DetailView, ListView, UpdateView
 
-from .models import Book
+from .models import Book, Review
 
 
 class BookListView(LoginRequiredMixin, ListView):
@@ -36,6 +36,17 @@ class BookUpdateView(LoginRequiredMixin, UpdateView):
     fields = ["title", "author", "price", "cover"]
     template_name = "books/book_add.html"
     action = "Update"
+
+
+class ReviewCreateView(LoginRequiredMixin, CreateView):
+    model = Review
+    template_name = "books/review_form.html"
+    fields = ("book", "review")
+    template_name = "books/review_form.html"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class SearchResultsListView(ListView):
