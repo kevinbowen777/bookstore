@@ -21,7 +21,8 @@ class BookDetailView(LoginRequiredMixin, DetailView):
 
 class BookCreateView(LoginRequiredMixin, CreateView):
     model = Book
-    fields = ["title", "author", "price"]
+    fields = ["title", "author", "price", "cover"]
+    template_name = "books/book_add.html"
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
