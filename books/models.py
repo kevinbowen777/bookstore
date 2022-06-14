@@ -19,6 +19,7 @@ class Book(models.Model):
         indexes = [
             models.Index(fields=["id"], name="id_index"),
         ]
+        ordering = ["title"]
         permissions = [
             ("special_status", "Can read all books"),
         ]
