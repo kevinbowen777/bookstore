@@ -24,7 +24,10 @@
       <h3>Reviews</h3>
       <ul>
         {% for review in book.reviews.all %}
-        <li>{{ review.review }} ({{ review.author }})</li>
+        <span>
+            <li>{{ review.review }}
+        </span>
+        <span class="text-muted"> &middot;  submitted by {{ review.author }} &middot; {{ review.date }}</li>
         {% endfor %}
       </ul>
     </div>
