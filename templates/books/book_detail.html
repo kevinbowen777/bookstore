@@ -6,6 +6,13 @@
   <div class="book-detail">
     <p>
     <h2><a href="">{{ book.title }}</a></h2>
+    <p>
+      <a class="btn btn-primary"
+        href="{% url 'update' book.id %}"
+        role="button">
+            Update
+      </a>
+    </p>
     {% if book.cover %}
       <img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">
     {% endif %}
