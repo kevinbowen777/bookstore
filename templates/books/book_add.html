@@ -5,7 +5,7 @@
 {% block content %}
 {% with action=view.action|default:"Add" %}
   <h2>{{ action }} a Book</h2>
-  <form method="post" action=".">
+  <form enctype="multipart/form-data" method="post" action=".">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-primary">{{ action }}</button>
