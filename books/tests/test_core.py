@@ -3,7 +3,7 @@ from django.contrib.auth.models import Permission
 from django.test import TestCase
 from django.urls import reverse
 
-from .models import Book, Review
+from ..models import Book, Review
 
 
 class BookTests(TestCase):
