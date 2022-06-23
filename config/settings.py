@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     "allauth",
     "allauth.account",
+    "django_countries",
     # "debug_toolbar",
     "django_extensions",
     # Local

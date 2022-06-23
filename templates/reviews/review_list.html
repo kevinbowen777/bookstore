@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Books{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <p>
+  {% for book in object_list %}
+    <div class="card">
+      <div class="card-header">
+        <a class="font-weight-bold" href="{% url 'book_detail' book.pk %}">{{book.title }}</a> &middot;
+        <span class="text-muted">by {{ book.author }} |
+        {{ book.date }}</span>
+      </div>
+      <div class="card-body">
+        {{ book.body }}
+        <a href="{% url 'book_edit' book.pk %}">Edit</a> |
+        <a href="{% url 'book_delete' book.pk %}">Delete</a> |
+        <a href="{% url 'review_new' book.pk %}">Add Review</a> |
+        <a href="{% url 'book_detail' book.pk %}">View Comments</a>
+      </div>
+    </div>
+    <br />
+  {% endfor %}
+  </p>
+</div>
+{% endblock content %}
