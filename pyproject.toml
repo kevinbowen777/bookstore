@@ -34,6 +34,12 @@ omit = [
     "*conftest.py",
     "*/extra*",
 ]
+plugins = [
+    "django_coverage_plugin",
+]
+
+[tool.coverage.django_coverage_plugin]
+template_extensions = "html, txt, tex, email"
 
 [tool.coverage.report]
 show_missing = true
@@ -71,6 +77,7 @@ django-debug-toolbar = "^3.2.4"
 isort = "^5.10.1"
 coverage = {extras = ["toml"], version = "^6.4.1"}
 pytest-cov = "^3.0.0"
+pytest = "^7.1.2"
 pytest-django = "^4.5.2"
 black = "^22.3.0"
 flake8 = "^4.0.1"
@@ -79,6 +86,9 @@ pytest-sugar = "^0.9.4"
 ipython = "^8.4.0"
 friendly = "^0.5.26"
 colorama = "^0.4.4"
+factory-boy = "^3.2.1"
+django-coverage-plugin = "^2.0.3"
+django-pytest = "^0.2.0"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
