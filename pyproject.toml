@@ -60,35 +60,35 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Django = "^4.0.3"
+Django = "^4.0.4"
 environs = {extras = ["django"], version = "^9.5.0"}
 psycopg2-binary = "^2.9.3"
 django-crispy-forms = "^1.14.0"
+django-extensions = "^3.1.5"
 django-allauth = "^0.50.0"
 Pillow = "^9.1.0"
 whitenoise = "^6.0.0"
 gunicorn = "^20.1.0"
-django-extensions = "^3.1.5"
 django-countries = "^7.3.2"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^2.18.1"
-django-debug-toolbar = "^3.2.4"
-isort = "^5.10.1"
-coverage = {extras = ["toml"], version = "^6.4.1"}
-pytest-cov = "^3.0.0"
-pytest = "^7.1.2"
-pytest-django = "^4.5.2"
+pre-commit = "^2.19.0"
 black = "^22.3.0"
 flake8 = "^4.0.1"
+isort = "^5.10.1"
+django-debug-toolbar = "^3.4.0"
+pytest = "^7.1.2"
+pytest-django = "^4.5.2"
+coverage = {extras = ["toml"], version = "^6.4.1"}
+pytest-cov = "^3.0.0"
 django-test-plus = "^2.2.0"
 pytest-sugar = "^0.9.4"
 ipython = "^8.4.0"
 friendly = "^0.5.26"
 colorama = "^0.4.4"
-factory-boy = "^3.2.1"
 django-coverage-plugin = "^2.0.3"
 django-pytest = "^0.2.0"
+factory-boy = "3.0.1"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
