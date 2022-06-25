@@ -89,6 +89,7 @@ colorama = "^0.4.4"
 django-coverage-plugin = "^2.0.3"
 django-pytest = "^0.2.0"
 factory-boy = "3.0.1"
+nox = "^2022.1.7"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
