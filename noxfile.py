@@ -2,7 +2,7 @@
 import nox
 
 nox.options.sessions = "lint", "tests"
-locations = "accounts", "books", "config", "pages", "noxfile.py"
+locations = "accounts", "books", "config", "pages", "./noxfile.py"
 
 
 @nox.session(python=["3.10", "3.9"])
@@ -18,7 +18,11 @@ def lint(session):
     """Lint using flake8."""
     args = session.posargs or locations
     session.install(
-        "flake8", "flake8-black", "flake8-bugbear", "flake8-import-order"
+        "flake8",
+        "flake8-bandit",
+        "flake8-black",
+        "flake8-bugbear",
+        "flake8-import-order",
     )
     session.run("flake8", *args)
 
