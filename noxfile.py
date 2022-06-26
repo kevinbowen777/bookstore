@@ -1,6 +1,7 @@
 """Nox sessions."""
 import nox
 
+nox.options.sessions = "lint", "tests"
 locations = "accounts", "books", "config", "pages", "noxfile.py"
 
 
@@ -16,7 +17,7 @@ def black(session):
 def lint(session):
     """Lint using flake8."""
     args = session.posargs or locations
-    session.install("flake8")
+    session.install("flake8", "flake8-black")
     session.run("flake8", *args)
 
 
