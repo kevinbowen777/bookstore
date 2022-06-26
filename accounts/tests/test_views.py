@@ -3,7 +3,6 @@ from django.contrib.sessions.middleware import SessionMiddleware
 from django.http import HttpRequest
 from django.test import RequestFactory
 from django.urls import reverse
-
 import pytest
 
 from ..forms import CustomUserChangeForm
