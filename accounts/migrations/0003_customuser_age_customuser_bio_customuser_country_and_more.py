@@ -7,33 +7,40 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0002_alter_customuser_groups_alter_customuser_is_active'),
+        (
+            "accounts",
+            "0002_alter_customuser_groups_alter_customuser_is_active",
+        ),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customuser',
-            name='age',
+            model_name="customuser",
+            name="age",
             field=models.PositiveIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customuser',
-            name='bio',
-            field=models.TextField(blank=True, verbose_name='Bio'),
+            model_name="customuser",
+            name="bio",
+            field=models.TextField(blank=True, verbose_name="Bio"),
         ),
         migrations.AddField(
-            model_name='customuser',
-            name='country',
-            field=django_countries.fields.CountryField(blank=True, max_length=2, verbose_name='Country'),
+            model_name="customuser",
+            name="country",
+            field=django_countries.fields.CountryField(
+                blank=True, max_length=2, verbose_name="Country"
+            ),
         ),
         migrations.AddField(
-            model_name='customuser',
-            name='name',
-            field=models.CharField(blank=True, max_length=255, verbose_name='Name of User'),
+            model_name="customuser",
+            name="name",
+            field=models.CharField(
+                blank=True, max_length=255, verbose_name="Name of User"
+            ),
         ),
         migrations.AddField(
-            model_name='customuser',
-            name='profile_pic',
-            field=models.ImageField(blank=True, upload_to='profile_pics/'),
+            model_name="customuser",
+            name="profile_pic",
+            field=models.ImageField(blank=True, upload_to="profile_pics/"),
         ),
     ]

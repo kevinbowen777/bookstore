@@ -7,18 +7,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('books', '0002_book_creator'),
+        ("books", "0002_book_creator"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='book',
-            options={'ordering': ['title'], 'permissions': [('special_status', 'Can read all books')]},
+            name="book",
+            options={
+                "ordering": ["title"],
+                "permissions": [("special_status", "Can read all books")],
+            },
         ),
         migrations.AddField(
-            model_name='review',
-            name='date',
-            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now),
+            model_name="review",
+            name="date",
+            field=models.DateTimeField(
+                auto_now_add=True, default=django.utils.timezone.now
+            ),
             preserve_default=False,
         ),
     ]
