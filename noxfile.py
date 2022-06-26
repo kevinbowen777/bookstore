@@ -17,7 +17,9 @@ def black(session):
 def lint(session):
     """Lint using flake8."""
     args = session.posargs or locations
-    session.install("flake8", "flake8-black", "flake8-import-order")
+    session.install(
+        "flake8", "flake8-black", "flake8-bugbear", "flake8-import-order"
+    )
     session.run("flake8", *args)
 
 
