@@ -154,6 +154,7 @@ EMAIL_USE_TLS = True
 # django-crispy-forms
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000", "http://localhost:8000"]
 # django-debug-toolbar
 # Note: disable when running Nox tests
 # Use the following in Docker only:
