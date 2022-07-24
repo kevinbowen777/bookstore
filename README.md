@@ -16,7 +16,7 @@
  - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
 ### Live Demo on Heroku:
- - https://still-escarpment-90214.herokuapp.com/
+ - https://kbowen-django-bookstore.herokuapp.com/
 
 ### Docker Container Image:
 
