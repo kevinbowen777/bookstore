@@ -1,4 +1,14 @@
-## bookstore - A web application built with Docker and Django web framework
+## bookstore 
+
+<div align="center">
+
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/bookstore.svg)](https://github.com/kevinbowen777/bookstore/issues)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
+- A web application built with Docker and Django web framework
 
 ---
 ## Features
@@ -44,8 +54,6 @@
 ### Book detail with django-debug-toolbar
 ![Detail debug-toolbar](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_booklist_debug-toolbar.png)
 
----
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/bookstore/blob/master/LICENSE)
 ---
 ### Reporting Bugs
 
