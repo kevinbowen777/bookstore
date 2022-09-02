@@ -1,4 +1,4 @@
-## bookstore 
+## Bookstore 
 
 <div align="center">
 
@@ -15,7 +15,10 @@
  - add book reviews
  - upload book covers
  - basic search capability
- - email verification for account registration & password/email change
+ - User registration with email verification & social(GitHub) login
+ - Bootstrap4 & crispy-forms decorations
+ - Customizable user profiles with bio, profile picture & country flags
+ - Nox testing sessions (black, linting, pytest, coverage, Sphinx doc generation)
  - uses django-debug-toolbar in DEBUG mode
 
 ### Installation
