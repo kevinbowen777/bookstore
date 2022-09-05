@@ -1,19 +1,10 @@
-# updated 20220207
+# updated 20220904
 # from: https://github.com/github/gitignore
 #
 LOCAL_APP_NOTES
-docker-compose-prod.yml
-bookstore.sqlite3
-
-# eslint install
-node_modules
+node_modules/
 package-lock.json
 package.json
-
-app.db
-.idea/
-logs/
-
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -54,7 +45,6 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
 .tox/
 .nox/
 .coverage
@@ -73,9 +63,12 @@ cover/
 *.pot
 
 # Django stuff:
+logs/
 *.log
 local_settings.py
 *.sqlite
+*.sqlite3
+app.db
 db.sqlite3
 db.sqlite3-journal
 
@@ -168,4 +161,4 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/

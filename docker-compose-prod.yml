@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  web:
+    build: .
+    command: gunicorn config.wsgi -b 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - "SECRET_KEY=st-#*pi3SG@!Pvp3A67juq-HuzYf?fDqz5q8bNWt-Hi_zgZZlu-Q"
+  db:
+    image: postgres:11
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
+volumes:
+  postgres_data:
