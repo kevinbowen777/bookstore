@@ -10,8 +10,17 @@
 
 - A basic bookstore application built using the Django 4.1 web framework
 
+##### Table of Contents
+ - [Features](#features)
+ - [Installation](#installation)
+ - [Testing](#testing)
+ - [Application Demo](#application-demo)
+ - [Screenshots](#screenshots)
+ - [Reporting Bugs](#reporting-bugs)
+
 ---
-## Features
+
+### Features
  - Application
      - Add book reviews
      - Upload book covers
@@ -35,11 +44,8 @@
              - flake8-import-order
          - safety(python package vulnerability testing)
          - pytest sessions with coverage
- - User registration with email verification & social(GitHub) login
- - Bootstrap4 & crispy-forms decorations
- - Customizable user profiles with bio, profile picture & country flags
- - Nox testing sessions (black, linting, pytest, coverage, Sphinx doc generation)
- - uses django-debug-toolbar in DEBUG mode
+
+---
 
 ### Installation
  - `git clone https://github.com/kevinbowen777/bookstore.git`
@@ -56,14 +62,24 @@
      - `docker-compose python manage.py createsuperuser`
  - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
-### Live Demo on Heroku:
- - https://kbowen-django-bookstore.herokuapp.com/
-
-### Docker Container Image:
-
- - TBD
 ---
-## Screenshots
+
+### Testing
+ - `docker-compose exec web python manage.py test`
+ - `coverage run -m pytest`
+ - Nox (includes sessions for black, lint, safety, tests)
+     - testing supported for Python 3.9, 3.10, 3.11
+     - e.g. `nox`, `nox -rs lint-3.11`, `nox -s tests`
+
+---
+
+### Application Demo
+A live application demonstration hosted at Heroku
+ - [Bookstore](https://kbowen-django-bookstore.herokuapp.com/)
+
+---
+
+### Screenshots
 
 ### Home
 ![Home](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_home.png)
@@ -78,6 +94,7 @@
 ![Detail debug-toolbar](https://github.com/kevinbowen777/bookstore/blob/master/images/bookstore_booklist_debug-toolbar.png)
 
 ---
+
 ### Reporting Bugs
 
    Visit the [Issues page](https://github.com/kevinbowen777/bookstore/issues)

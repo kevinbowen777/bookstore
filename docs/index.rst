@@ -7,6 +7,11 @@ Bookstore
 
    license
 
+.. contents:: Table of Contents
+   :local:
+   :backlinks: top
+   :depth: 2
+
 A basic bookstore application built using the Django 4.1 web framework
 
 Features
@@ -51,8 +56,8 @@ run this command in your terminal:
    $ git clone https://github.com/kevinbowen777/bookstore.git
    $ cd bookstore
 
-Local install:
---------------
+Local installation
+------------------
 
 .. code-block:: console
 
@@ -62,8 +67,8 @@ Local install:
    $ python manage.py createsuperuser
    
 
-Docker install:
----------------
+Docker installation
+-------------------
 
 .. code-block:: console
 
@@ -96,8 +101,10 @@ Testing
    $ nox -rs lint-3.11
    $ nox -s tests
 
-Live Application Demonstration on Heroku
-----------------------------------------
+Application Demo
+----------------
+Live demonstration of application running on Heroku:
+
 `kbowen-django-bookstore <https://kbowen-django-bookstore.herokuapp.com/>`_
 
 Reporting Bugs
