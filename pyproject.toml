@@ -44,13 +44,6 @@ template_extensions = "html, txt, tex, email"
 [tool.coverage.report]
 show_missing = true
 
-[tool.isort]
-profile = "black"
-multi_line_output = 3
-skip = ["*.gitignore"]
-extend_skip = ["*.md", "*.json"]
-line_length = 79
-
 [tool.poetry]
 name = "bookstore"
 version = "0.1.0"
