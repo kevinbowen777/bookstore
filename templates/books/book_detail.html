@@ -35,7 +35,7 @@
   <p>Would you like to add your own review of this book?</p>
     <p>
       <a class="btn btn-primary"
-        href="{% url 'review_add' %}" role="button">
+        href="{% url 'review_add' book.id %}" role="button">
         Add a new review
       </a>
     </p>

@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
+from django.urls import reverse  # noqa: F401
 from django.views.generic import CreateView, DetailView, ListView, UpdateView
 
 from .models import Book, Review
@@ -40,13 +41,31 @@ class BookUpdateView(LoginRequiredMixin, UpdateView):
 
 class ReviewCreateView(LoginRequiredMixin, CreateView):
     model = Review
-    template_name = "books/review_form.html"
+    template_name = "reviews/review_add.html"
     fields = ("book", "review")
-    template_name = "reviews/review_form.html"
+
+    def get_initial(self):
+        initial_data = super(ReviewCreateView, self).get_initial()
+        book = Book.objects.get(id=self.kwargs["pk"])
+        initial_data["book"] = book
+        return initial_data
+
+    def get_context_data(self):
+        context = super(ReviewCreateView, self).get_context_data()
+        book = Book.objects.get(id=self.kwargs["pk"])
+        context["book"] = book
+        context["title"] = "Add a new review"
+        return context
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+    """
+    def get_success_url(self):
+        book = Book.objects.get(id=self.kwargs["pk"])
+        return reverse("book_detail", args=[self.object.pk])
+    """
 
 
 class SearchResultsListView(ListView):
