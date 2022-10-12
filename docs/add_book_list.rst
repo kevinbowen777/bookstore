@@ -29,7 +29,7 @@ Sample book list
         title="Brave New World",
         author="Aldous Huxley",
         price="19.95",
-        cover="covers/brave/huxley.jpg"
+        cover="covers/brave_huxley.jpg"
     )
 
     Book.objects.create(
