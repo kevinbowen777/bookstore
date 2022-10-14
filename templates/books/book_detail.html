@@ -38,6 +38,8 @@
           {% else %}
           {% endif %}
             </li>
+        {% empty %}
+          <p class="text-muted"><em>No reviews have been posted yet.</em></p>
         {% endfor %}
       </ul>
     </div>
