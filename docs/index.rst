@@ -9,6 +9,7 @@ Bookstore
    package_index
    create_new_users
    add_book_list
+   add_reviews
 
 .. contents:: Table of Contents
    :local:
