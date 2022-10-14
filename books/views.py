@@ -41,8 +41,8 @@ class BookUpdateView(LoginRequiredMixin, UpdateView):
 
 class ReviewCreateView(LoginRequiredMixin, CreateView):
     model = Review
-    template_name = "reviews/review_add.html"
-    fields = ("book", "review")
+    template_name = "reviews/review_create.html"
+    fields = ["book", "review"]
 
     def get_initial(self):
         initial_data = super(ReviewCreateView, self).get_initial()
@@ -66,6 +66,19 @@ class ReviewCreateView(LoginRequiredMixin, CreateView):
         book = Book.objects.get(id=self.kwargs["pk"])
         return reverse("book_detail", args=[self.object.pk])
     """
+
+
+class ReviewDetailView(LoginRequiredMixin, DetailView):
+    model = Review
+    context_object_name = "review"
+    template_name = "reviews/review_detail.html"
+
+
+class ReviewUpdateView(LoginRequiredMixin, UpdateView):
+    model = Review
+    fields = ["book", "review"]
+    template_name = "reviews/review_create.html"
+    action = "Update"
 
 
 class SearchResultsListView(ListView):

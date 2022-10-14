@@ -6,6 +6,7 @@ from .views import (
     BookListView,
     BookUpdateView,
     ReviewCreateView,
+    ReviewDetailView,
     SearchResultsListView,
 )
 
@@ -15,7 +16,10 @@ urlpatterns = [
     path("<uuid:pk>/update/", BookUpdateView.as_view(), name="update"),
     path("<uuid:pk>/", BookDetailView.as_view(), name="book_detail"),
     path(
-        "<uuid:pk>/review/add/", ReviewCreateView.as_view(), name="review_add"
+        "<uuid:pk>/review/add/",
+        ReviewCreateView.as_view(),
+        name="review_create",
     ),
+    path("review/<int:pk>/", ReviewDetailView.as_view(), name="review_detail"),
     path("search/", SearchResultsListView.as_view(), name="search_results"),
 ]
