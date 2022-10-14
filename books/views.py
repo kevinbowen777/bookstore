@@ -83,7 +83,7 @@ class ReviewDetailView(LoginRequiredMixin, DetailView):
 class ReviewUpdateView(LoginRequiredMixin, UpdateView):
     model = Review
     fields = ["book", "review"]
-    template_name = "reviews/review_create.html"
+    template_name = "reviews/review_update.html"
     action = "Update"
 
 

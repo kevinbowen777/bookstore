@@ -33,7 +33,7 @@
         </span>
         <span class="text-muted"> &middot;  submitted by {{ review.author }} &middot; {{ review.date }}
           {% if request.user == review.author %}
-            <a href="#">Update</a> |
+            <a href="{% url 'review_update' review.id %}">Update</a> |
             <a href="{% url 'review_delete' review.id %}">Delete</a> |
           {% else %}
           {% endif %}
