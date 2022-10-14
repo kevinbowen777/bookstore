@@ -16,7 +16,7 @@
         {{ book.body }}
         <a href="{% url 'book_edit' book.pk %}">Edit</a> |
         <a href="{% url 'book_delete' book.pk %}">Delete</a> |
-        <a href="{% url 'review_new' book.pk %}">Add Review</a> |
+        <a href="{% url 'review_create' book.pk %}">Add Review</a> |
         <a href="{% url 'book_detail' book.pk %}">View Comments</a>
       </div>
     </div>

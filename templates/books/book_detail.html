@@ -25,9 +25,15 @@
       <ul>
         {% for review in book.reviews.all %}
         <span>
-            <li>{{ review.review }}
+            <li><a href="{% url 'review_detail' review.id %}">{{ review.review|truncatewords:7 }}</a>
         </span>
-        <span class="text-muted"> &middot;  submitted by {{ review.author }} &middot; {{ review.date }}</li>
+        <span class="text-muted"> &middot;  submitted by {{ review.author }} &middot; {{ review.date }}
+          {% if request.user == review.author %}
+            <a href="#">Update</a> |
+            <a href="#">Delete</a> |
+          {% else %}
+          {% endif %}
+            </li>
         {% endfor %}
       </ul>
     </div>
@@ -35,7 +41,7 @@
   <p>Would you like to add your own review of this book?</p>
     <p>
       <a class="btn btn-primary"
-        href="{% url 'review_add' book.id %}" role="button">
+        href="{% url 'review_create' book.id %}" role="button">
         Add a new review
       </a>
     </p>
