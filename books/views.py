@@ -1,7 +1,13 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
-from django.urls import reverse  # noqa: F401
-from django.views.generic import CreateView, DetailView, ListView, UpdateView
+from django.urls import reverse, reverse_lazy  # noqa: F401
+from django.views.generic import (
+    CreateView,
+    DeleteView,
+    DetailView,
+    ListView,
+    UpdateView,
+)
 
 from .models import Book, Review
 
@@ -79,6 +85,12 @@ class ReviewUpdateView(LoginRequiredMixin, UpdateView):
     fields = ["book", "review"]
     template_name = "reviews/review_create.html"
     action = "Update"
+
+
+class ReviewDeleteView(DeleteView):
+    model = Review
+    template_name = "reviews/review_delete.html"
+    success_url = reverse_lazy("book_list")
 
 
 class SearchResultsListView(ListView):

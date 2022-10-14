@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h3>Delete your review</h3>
+<div class="container">
+  <p>
+  <h3>Delete your review?</h3>
   <form action="" method="post">{% csrf_token %}
-    <p>Are you sure you want to delete "{{ review.title }}"?</p>
+      <p>Are you sure you want to delete your review for <strong>"{{ review.book.title }}"</strong>?</p>
+      <p><em>"{{ review.review }}"</em></p>
     <button class="btn btn-danger ml-2" type="submit">Confirm</button>
     <a class="btn btn-info" href="javascript:window.history.back()">Cancel</a>
   </form>
+  </p>
+</div>
 {% endblock content %}

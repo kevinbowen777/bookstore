@@ -21,7 +21,11 @@
       <li>Price: {{ book.price }}</li>
     </ul>
     <div>
-      <h3>Reviews</h3>
+        <p>Would you like to add your own review of this book?
+            <a class="btn btn-success" href="{% url 'review_create' book.id %}" role="button"> Add a new review
+           </a>
+        </p>
+        <h3>Reviews for <em>{{ book.title }}</em>:</h3>
       <ul>
         {% for review in book.reviews.all %}
         <span>
@@ -30,20 +34,13 @@
         <span class="text-muted"> &middot;  submitted by {{ review.author }} &middot; {{ review.date }}
           {% if request.user == review.author %}
             <a href="#">Update</a> |
-            <a href="#">Delete</a> |
+            <a href="{% url 'review_delete' review.id %}">Delete</a> |
           {% else %}
           {% endif %}
             </li>
         {% endfor %}
       </ul>
     </div>
-    </p>
-  <p>Would you like to add your own review of this book?</p>
-    <p>
-      <a class="btn btn-primary"
-        href="{% url 'review_create' book.id %}" role="button">
-        Add a new review
-      </a>
     </p>
   </div>
 {% endblock content %}

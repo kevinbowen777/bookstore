@@ -19,7 +19,7 @@
       </p>
           {% if request.user == review.author %}
             <a class="btn btn-success" href="#">Update</a> |
-            <a class="btn btn-danger" href="#">Delete</a> |
+            <a class="btn btn-danger" href="{% url 'review_delete' review.id %}">Delete</a> |
             <a class="btn btn-info" href="javascript:window.history.back()">Return to Book Page</a>
           {% else %}
             <a class="btn btn-info" href="javascript:window.history.back()">Return to Book Page</a>

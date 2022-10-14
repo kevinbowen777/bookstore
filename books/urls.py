@@ -6,6 +6,7 @@ from .views import (
     BookListView,
     BookUpdateView,
     ReviewCreateView,
+    ReviewDeleteView,
     ReviewDetailView,
     SearchResultsListView,
 )
@@ -21,5 +22,10 @@ urlpatterns = [
         name="review_create",
     ),
     path("review/<int:pk>/", ReviewDetailView.as_view(), name="review_detail"),
+    path(
+        "review/<int:pk>/delete/",
+        ReviewDeleteView.as_view(),
+        name="review_delete",
+    ),
     path("search/", SearchResultsListView.as_view(), name="search_results"),
 ]
