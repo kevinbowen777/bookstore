@@ -128,7 +128,7 @@ MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 # django-allauth config
-LOGIN_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "book_list"
 LOGOUT_REDIRECT_URL = "home"
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = (
