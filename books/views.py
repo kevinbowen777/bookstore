@@ -12,7 +12,8 @@ from django.views.generic import (
 from .models import Book, Review
 
 
-class BookListView(LoginRequiredMixin, ListView):
+class BookListView(ListView):
+    # class BookListView(LoginRequiredMixin, ListView):
     model = Book
     context_object_name = "book_list"
     template_name = "books/book_list.html"
@@ -21,7 +22,7 @@ class BookListView(LoginRequiredMixin, ListView):
     paginate_by = 10
 
 
-class BookDetailView(LoginRequiredMixin, DetailView):
+class BookDetailView(DetailView):
     model = Book
     context_object_name = "book"
     template_name = "books/book_detail.html"
