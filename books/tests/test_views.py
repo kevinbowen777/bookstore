@@ -2,8 +2,15 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Permission
 from django.test import TestCase
 from django.urls import reverse
+from django.test import RequestFactory  # noqa:F401
+import pytest
 
 from ..models import Book, Review
+from ..views import (
+    BookCreateView,
+)
+
+pytestmark = pytest.mark.django_db
 
 
 class BookTests(TestCase):
@@ -62,3 +69,24 @@ class BookTests(TestCase):
         self.assertContains(response, "Learning Python")
         self.assertTemplateUsed(response, "books/book_detail.html")
         self.assertContains(response, "An excellent review")
+
+
+# def test_book_create_form_valid(rf):
+def test_book_create_form_valid(rf, admin_user):
+    # Submit the book add form
+    form_data = {
+        "title": "Programming Python",
+        "author": "Mark Lutz",
+        "price": "69.00",
+    }
+    request = rf.post(reverse("book_add"), form_data)
+    # request.user = self.user
+    request.user = admin_user
+    response = BookCreateView.as_view()(request)  # noqa:F841
+    # Get the book based on the name
+    book = Book.objects.get(title="Programming Python")  # noqa:F811
+    # Test that the book matches our form
+    assert book.author == "Mark Lutz"
+    assert book.price == 69.00
+    # assert book.creator == self.user
+    assert book.creator == admin_user
