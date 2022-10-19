@@ -29,12 +29,12 @@
       <ul>
         {% for review in book.reviews.all %}
         <span>
-            <li><a href="{% url 'review_detail' review.id %}">{{ review.review|truncatewords:7 }}</a>
+            <li><a href="{% url 'review_detail' book.id review.id %}">{{ review.review|truncatewords:7 }}</a>
         </span>
         <span class="text-muted"> &middot;  submitted by {{ review.author }} &middot; {{ review.date }}
           {% if request.user == review.author %}
-            <a href="{% url 'review_update' review.id %}">Update</a> |
-            <a href="{% url 'review_delete' review.id %}">Delete</a> |
+            <a href="{% url 'review_update' book.id review.id %}">Update</a> |
+            <a href="{% url 'review_delete' book.id review.id %}">Delete</a> |
           {% else %}
           {% endif %}
             </li>

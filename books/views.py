@@ -53,13 +53,13 @@ class ReviewCreateView(LoginRequiredMixin, CreateView):
 
     def get_initial(self):
         initial_data = super(ReviewCreateView, self).get_initial()
-        book = Book.objects.get(id=self.kwargs["pk"])
+        book = Book.objects.get(id=self.kwargs["book_id"])
         initial_data["book"] = book
         return initial_data
 
     def get_context_data(self):
         context = super(ReviewCreateView, self).get_context_data()
-        book = Book.objects.get(id=self.kwargs["pk"])
+        book = Book.objects.get(id=self.kwargs["book_id"])
         context["book"] = book
         context["title"] = "Add a new review"
         return context
@@ -68,11 +68,8 @@ class ReviewCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-    """
     def get_success_url(self):
-        book = Book.objects.get(id=self.kwargs["pk"])
-        return reverse("book_detail", args=[self.object.pk])
-    """
+        return reverse("book_detail", args=[self.object.book_id])
 
 
 class ReviewDetailView(LoginRequiredMixin, DetailView):
@@ -87,11 +84,16 @@ class ReviewUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "reviews/review_update.html"
     action = "Update"
 
+    def get_success_url(self):
+        return reverse("book_detail", args=[self.object.book_id])
+
 
 class ReviewDeleteView(DeleteView):
     model = Review
     template_name = "reviews/review_delete.html"
-    success_url = reverse_lazy("book_list")
+
+    def get_success_url(self):
+        return reverse("book_detail", args=[self.object.book_id])
 
 
 class SearchResultsListView(ListView):

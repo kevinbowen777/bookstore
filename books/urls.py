@@ -18,18 +18,22 @@ urlpatterns = [
     path("<uuid:pk>/update/", BookUpdateView.as_view(), name="update"),
     path("<uuid:pk>/", BookDetailView.as_view(), name="book_detail"),
     path(
-        "<uuid:pk>/review/add/",
+        "<uuid:book_id>/review/add/",
         ReviewCreateView.as_view(),
         name="review_create",
     ),
-    path("review/<int:pk>/", ReviewDetailView.as_view(), name="review_detail"),
     path(
-        "review/<int:pk>/update/",
+        "<uuid:book_id>/review/<int:pk>/",
+        ReviewDetailView.as_view(),
+        name="review_detail",
+    ),
+    path(
+        "<uuid:book_id>/review/<int:pk>/update/",
         ReviewUpdateView.as_view(),
         name="review_update",
     ),
     path(
-        "review/<int:pk>/delete/",
+        "<uuid:book_id>/review/<int:pk>/delete/",
         ReviewDeleteView.as_view(),
         name="review_delete",
     ),
