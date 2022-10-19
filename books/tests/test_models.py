@@ -1,26 +1,14 @@
-from django.contrib.auth import get_user_model
-from django.contrib.auth.models import Permission
+from accounts.tests.factories import UserFactory
 from django.test import TestCase
 
-from ..models import Book, Review
+from .factories import BookFactory
+from ..models import Review
 
 
 class BookTests(TestCase):
     def setUp(self):
-        self.user = get_user_model().objects.create_user(
-            username="reviewuser",
-            email="reviewuser@email.com",
-            password="testpass123",
-        )
-        self.special_permission = Permission.objects.get(
-            codename="special_status"
-        )
-        self.book = Book.objects.create(
-            title="Learning Python",
-            author="Mark Lutz",
-            price="53.00",
-        )
-
+        self.user = UserFactory()
+        self.book = BookFactory()
         self.review = Review.objects.create(
             book=self.book,
             author=self.user,
