@@ -11,6 +11,7 @@ from ..views import (
     BookCreateView,
     BookDetailView,
     BookListView,
+    # ReviewCreateView,
 )
 
 
@@ -90,11 +91,10 @@ def test_review_create_form_valid(rf, admin_user):
     # Submit the book add form
     book = BookFactory()
     form_data = {
-        # "book": str(book.id),
         "review": "This is a great book",
     }
-    url = reverse("review_create", kwargs={'pk': book.pk})
-    request = rf.post(url, form_data)
+    url = reverse("review_create", kwargs={'book_id': book.id})
+    request = rf.post((url), form_data)
     request.user = admin_user
     response = ReviewCreateView.as_view()(request)  # noqa:F841
     # Get the book based on the name
