@@ -5,7 +5,7 @@ from pytest_django.asserts import (
     assertContains,
 )
 
-from .factories import BookFactory
+from .factories import book, BookFactory  # noqa:F401
 from ..models import Book
 from ..views import (
     BookCreateView,
@@ -27,6 +27,29 @@ def test_book_list_view(rf):
     assertContains(response, "Our Book list")
 
 
+def test_book_detail_view(rf, book):  # noqa:F811
+    # Order a book from the BookFactory
+    # Get the request
+    url = reverse("book_detail", kwargs={"pk": book.pk})
+    request = rf.get(url)
+    # Use the request to get the response
+    callable_obj = BookDetailView.as_view()
+    response = callable_obj(request, pk=book.pk)
+    # Test that the response is valid
+    assertContains(response, book.title)
+
+
+def test_book_create_view(rf, book, admin_user):  # noqa:F811
+    # Make a request for our new book
+    request = rf.get(reverse("book_add"))
+    # Add an authenticated user
+    request.user = admin_user
+    # Use the request to get the response
+    response = BookCreateView.as_view()(request)
+    # Test that the response is valid
+    assert response.status_code == 200
+
+
 def test_book_list_contains_2_books(rf):
     # Create a couple of books
     book1 = BookFactory()
@@ -41,21 +64,7 @@ def test_book_list_contains_2_books(rf):
     assertContains(response, book2.title)
 
 
-def test_book_detail_view(rf):
-    # Order a book from the BookFactory
-    book = BookFactory()
-    # Get the request
-    url = reverse("book_detail", kwargs={"pk": book.pk})
-    request = rf.get(url)
-    # Use the request to get the response
-    callable_obj = BookDetailView.as_view()
-    response = callable_obj(request, pk=book.pk)
-    # Test that the response is valid
-    assertContains(response, book.title)
-
-
-def test_detail_contains_book_data(rf):
-    book = BookFactory()
+def test_detail_contains_book_data(rf, book):  # noqa:F811
     # Make a request for our new book
     url = reverse("book_detail", kwargs={"pk": book.pk})
     request = rf.get(url)
