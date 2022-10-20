@@ -117,6 +117,27 @@ def test_book_update_view(rf, admin_user, book):  # noqa:F811
     assertContains(response, "Update")
 
 
+def test_book_update(rf, admin_user, book):  # noqa:F811
+    """POST request to BookUpdateView updates a book
+    and redirects.
+    """
+    # Make a request for our new book
+    form_data = {
+        "title": book.title,
+        "author": "John Q. Public",
+        "price": book.price,
+    }
+    url = reverse("book_update", kwargs={"pk": book.id})
+    request = rf.post(url, form_data)
+    request.user = admin_user
+    callable_obj = BookUpdateView.as_view()
+    response = callable_obj(request, pk=book.id)  # noqa:F841
+
+    # Check that the book has been changed
+    book.refresh_from_db()
+    assert book.author == "John Q. Public"
+
+
 """
 def test_review_create_form_valid(rf, admin_user):
     # Submit the book add form
