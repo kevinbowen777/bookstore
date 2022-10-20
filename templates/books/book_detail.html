@@ -1,28 +1,34 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block title %}{{ book.title }}{% endblock title %}
 
 {% block content %}
   <div class="book-detail">
     <p>
-    <h2><a href="">{{ book.title }}</a></h2>
-    <p>
-      <a class="btn btn-primary"
-        href="{% url 'book_update' book.id %}"
-        role="button">
-            Update
-      </a>
+      <p>
+        <h2><a href="">{{ book.title }}</a></h2>
+        <a class="btn btn-primary btn-sm" href="{% url 'book_update' book.id %}" role="button">
+            Update Book Details
+        </a>
+      </p>
     </p>
-    {% if book.cover %}
-      <img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">
-    {% endif %}
+    <div>
+      <p class="covertext">
+        {% if book.cover %}
+          <img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">
+        {% endif %}
+      <em class="booktext">{{ book.description|linebreaksbr }}</em>
+      </p>
+      <hr>
+    </div>
     <ul style="list-style-type:none;">
       <li>Author: {{ book.author }}</li>
       <li>Price: {{ book.price }}</li>
     </ul>
+    <hr>
     <div>
         <p>Would you like to add your own review of this book?
-            <a class="btn btn-success" href="{% url 'review_create' book.id %}" role="button"> Add a new review
+            <a class="btn btn-success btn-sm" href="{% url 'review_create' book.id %}" role="button"> Add a new review
            </a>
         </p>
         <h3>Reviews for <em>{{ book.title }}</em>:</h3>
