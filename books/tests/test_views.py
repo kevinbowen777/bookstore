@@ -139,19 +139,19 @@ def test_book_update(rf, admin_user, book):  # noqa:F811
 
 
 """
-def test_review_create_form_valid(rf, admin_user):
-    # Submit the book add form
-    book = BookFactory()
+def test_review_create_form_valid(rf, admin_user, book):  # noqa:F811
     form_data = {
+        "book": book.id,
         "review": "This is a great book",
     }
-    url = reverse("review_create", kwargs={'book_id': book.id})
+    url = reverse("review_create", kwargs={'book_id': str(book.id)})
     request = rf.post((url), form_data)
     request.user = admin_user
     response = ReviewCreateView.as_view()(request)  # noqa:F841
     # Get the book based on the name
-    review = Review.objects.get(review="This is a great book")  # noqa:F811
+    # review = Review.objects.get(review="This is a great book")  # noqa:F811
     # Test that the book matches our form
+    book.refresh_from_db()
     assert review.book == book.title
     assert review.review == "This is a great book"
     assert review.creator == admin_user
