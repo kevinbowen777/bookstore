@@ -50,17 +50,17 @@ Sample user list
     )
     Review.objects.create(
         book = Book.objects.get(title="Brave New World"),
-        review = "This is a manual test review. Blah Blah Blah",
+        review = "This is a manual test review.\n\n Blah Blah Blah",
         author = User.objects.get(username="david"),
     )
     Review.objects.create(
         book = Book.objects.get(title="Brave New World"),
-        review = "Tortor at auctor urna nunc. Sed libero enim sed faucibus turpis in eu mi bibendum. Dictum non consectetur a erat nam at lectus urna duis. Purus viverra accumsan in nisl nisi.",
+        review = "Tortor at auctor urna nunc.\n Sed libero enim sed faucibus turpis in eu mi bibendum. Dictum non consectetur a erat nam at lectus urna duis. Purus viverra accumsan in nisl nisi.",
         author = User.objects.get(username="john"),
     )
     Review.objects.create(
         book = Book.objects.get(title="Brave New World"),
-        review = "This is a manual test review 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt praesent semper feugiat nibh sed pulvinar. Ultrices vitae auctor eu augue. Neque vitae tempus quam pellentesque nec nam aliquam sem. Posuere lorem ipsum dolor sit amet consectetur.",
+        review = "This is a manual test review 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n Tincidunt praesent semper feugiat nibh sed pulvinar. Ultrices vitae auctor eu augue. Neque vitae tempus quam pellentesque nec nam aliquam sem. Posuere lorem ipsum dolor sit amet consectetur.",
         author = User.objects.get(username="susan"),
     )
     Review.objects.create(
@@ -80,6 +80,6 @@ Sample user list
     )
     Review.objects.create(
         book = Book.objects.get(title="Brave New World"),
-        review = "Nulla facilisi etiam dignissim diam quis enim lobortis. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Eu ultrices vitae auctor eu augue ut lectus. Malesuada bibendum arcu vitae elementum curabitur vitae nunc. Eros donec ac odio tempor orci. ",
+        review = "Nulla facilisi etiam dignissim diam quis enim lobortis.\n\n Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Eu ultrices vitae auctor eu augue ut lectus. Malesuada bibendum arcu vitae elementum curabitur vitae nunc. Eros donec ac odio tempor orci. ",
         author = User.objects.get(username="john"),
     )
