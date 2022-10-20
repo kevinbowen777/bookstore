@@ -13,11 +13,7 @@
   </div>
   <div class="card-footer">
       <p>
-        <span class="font-weight-bold">
-          <li> &middot;
-        </span>
-        {{ review.review }}
-          </li>
+        {{ review.review|linebreaksbr }}
       </p>
           {% if request.user == review.author %}
             <a class="btn btn-success" href="{% url 'review_update' review.book.id review.id %}">Update</a> |
