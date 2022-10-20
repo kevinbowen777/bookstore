@@ -105,7 +105,7 @@ def test_book_create_correct_title(rf, admin_user):
 
 
 def test_book_update_view(rf, admin_user, book):  # noqa:F811
-    url = reverse("update", kwargs={"pk": book.id})
+    url = reverse("book_update", kwargs={"pk": book.id})
     # Make a request for our new cheese
     request = rf.get(url)
     # Add an authenticated user

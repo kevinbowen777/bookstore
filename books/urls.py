@@ -15,7 +15,7 @@ from .views import (
 urlpatterns = [
     path("", BookListView.as_view(), name="book_list"),
     path("add/", BookCreateView.as_view(), name="book_add"),
-    path("<uuid:pk>/update/", BookUpdateView.as_view(), name="update"),
+    path("<uuid:pk>/update/", BookUpdateView.as_view(), name="book_update"),
     path("<uuid:pk>/", BookDetailView.as_view(), name="book_detail"),
     path(
         "<uuid:book_id>/review/add/",
