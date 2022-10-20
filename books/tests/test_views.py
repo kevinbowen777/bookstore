@@ -95,6 +95,14 @@ def test_book_create_form_valid(rf, admin_user):
     assert book.creator == admin_user
 
 
+def test_book_create_correct_title(rf, admin_user):
+    """Page title for BookCreateView should be Add Book."""
+    request = rf.get(reverse("book_add"))
+    request.user = admin_user
+    response = BookCreateView.as_view()(request)
+    assertContains(response, "Add a Book")
+
+
 """
 def test_review_create_form_valid(rf, admin_user):
     # Submit the book add form
