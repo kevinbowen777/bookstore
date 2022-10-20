@@ -14,7 +14,7 @@ from .models import Book, Review
 
 class BookCreateView(LoginRequiredMixin, CreateView):
     model = Book
-    fields = ["title", "author", "price", "cover"]
+    fields = ["title", "author", "price", "description", "cover"]
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
@@ -37,7 +37,7 @@ class BookListView(ListView):
 
 class BookUpdateView(LoginRequiredMixin, UpdateView):
     model = Book
-    fields = ["title", "author", "price", "cover"]
+    fields = ["title", "author", "price", "description", "cover"]
     action = "Update"
 
 

@@ -15,6 +15,7 @@ class BookAdmin(admin.ModelAdmin):
         "title",
         "author",
         "price",
+        "description",
     )
 
 

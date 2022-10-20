@@ -14,6 +14,11 @@ class Book(models.Model):
     creator = models.ForeignKey(
         get_user_model(), null=True, on_delete=models.SET_NULL
     )
+    description = models.TextField(
+        max_length=1000,
+        blank=True,
+        help_text="Enter a brief description of the book.",
+    )
 
     class Meta:
         indexes = [
