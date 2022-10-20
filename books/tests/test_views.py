@@ -11,6 +11,7 @@ from ..views import (
     BookCreateView,
     BookDetailView,
     BookListView,
+    BookUpdateView,
     # ReviewCreateView,
 )
 
@@ -101,6 +102,19 @@ def test_book_create_correct_title(rf, admin_user):
     request.user = admin_user
     response = BookCreateView.as_view()(request)
     assertContains(response, "Add a Book")
+
+
+def test_book_update_view(rf, admin_user, book):  # noqa:F811
+    url = reverse("update", kwargs={"pk": book.id})
+    # Make a request for our new cheese
+    request = rf.get(url)
+    # Add an authenticated user
+    request.user = admin_user
+    # Use the request to get the response
+    callable_obj = BookUpdateView.as_view()
+    response = callable_obj(request, pk=book.id)
+    # Test that the response is valid
+    assertContains(response, "Update")
 
 
 """
