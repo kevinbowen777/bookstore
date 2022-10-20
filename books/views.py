@@ -1,6 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
-from django.urls import reverse, reverse_lazy  # noqa: F401
+from django.urls import reverse
 from django.views.generic import (
     CreateView,
     DeleteView,
@@ -12,43 +12,37 @@ from django.views.generic import (
 from .models import Book, Review
 
 
-class BookListView(ListView):
-    # class BookListView(LoginRequiredMixin, ListView):
-    model = Book
-    context_object_name = "book_list"
-    template_name = "books/book_list.html"
-    login_url = "account_login"
-
-    paginate_by = 10
-
-
-class BookDetailView(DetailView):
-    model = Book
-    context_object_name = "book"
-    template_name = "books/book_detail.html"
-    login_url = "account_login"
-
-
 class BookCreateView(LoginRequiredMixin, CreateView):
     model = Book
     fields = ["title", "author", "price", "cover"]
-    template_name = "books/book_add.html"
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
         return super().form_valid(form)
 
 
+class BookDetailView(DetailView):
+    model = Book
+    context_object_name = "book"
+    login_url = "account_login"
+
+
+class BookListView(ListView):
+    model = Book
+    context_object_name = "book_list"
+    login_url = "account_login"
+
+    paginate_by = 10
+
+
 class BookUpdateView(LoginRequiredMixin, UpdateView):
     model = Book
     fields = ["title", "author", "price", "cover"]
-    template_name = "books/book_add.html"
     action = "Update"
 
 
 class ReviewCreateView(LoginRequiredMixin, CreateView):
     model = Review
-    template_name = "reviews/review_create.html"
     fields = ["book", "review"]
 
     def get_initial(self):
@@ -75,13 +69,11 @@ class ReviewCreateView(LoginRequiredMixin, CreateView):
 class ReviewDetailView(LoginRequiredMixin, DetailView):
     model = Review
     context_object_name = "review"
-    template_name = "reviews/review_detail.html"
 
 
 class ReviewUpdateView(LoginRequiredMixin, UpdateView):
     model = Review
     fields = ["book", "review"]
-    template_name = "reviews/review_update.html"
     action = "Update"
 
     def get_success_url(self):
@@ -90,7 +82,6 @@ class ReviewUpdateView(LoginRequiredMixin, UpdateView):
 
 class ReviewDeleteView(DeleteView):
     model = Review
-    template_name = "reviews/review_delete.html"
 
     def get_success_url(self):
         return reverse("book_detail", args=[self.object.book_id])
