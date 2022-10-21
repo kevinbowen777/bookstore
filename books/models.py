@@ -44,7 +44,7 @@ class Review(models.Model):
     )
     review = models.TextField("Review", blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(
+    creator = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
     )

@@ -7,7 +7,7 @@
 <div class="container">
   <p>
     {% with action=view.action|default:"Add" %}
-    <h2>{{ action }} Book Review for {{review.book.title|default:book.title}}</h2>
+    <h2>{{ action }} Book Review: {{ review.book.title }}</h2>
       <form class="col-md-6" method="post" action=".">
         {% csrf_token %}
         {{ form|crispy }}
