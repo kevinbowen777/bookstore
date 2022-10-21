@@ -11,7 +11,7 @@ class BookTests(TestCase):
         self.book = BookFactory()
         self.review = Review.objects.create(
             book=self.book,
-            author=self.user,
+            creator=self.user,
             review="An excellent review",
         )
 
