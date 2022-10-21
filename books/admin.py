@@ -14,8 +14,10 @@ class BookAdmin(admin.ModelAdmin):
     list_display = (
         "title",
         "author",
-        "price",
         "description",
+        "price",
+        "publisher",
+        "pubdate",
     )
 
 
