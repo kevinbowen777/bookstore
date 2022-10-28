@@ -1,6 +1,8 @@
 from accounts.tests.factories import UserFactory
+
 import factory
 import factory.fuzzy
+
 import pytest
 
 from ..models import Book

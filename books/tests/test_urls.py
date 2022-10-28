@@ -1,4 +1,5 @@
 from django.urls import resolve, reverse
+
 import pytest
 
 from .factories import BookFactory
