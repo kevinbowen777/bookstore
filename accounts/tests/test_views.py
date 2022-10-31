@@ -1,3 +1,4 @@
+"""Test Views for bookstore user accounts."""
 from django.contrib.messages.middleware import MessageMiddleware
 from django.contrib.sessions.middleware import SessionMiddleware
 from django.http import HttpRequest
@@ -50,7 +51,7 @@ class TestUserUpdateView:
     def test_form_valid(
         self, user: CustomUser, request_factory: RequestFactory
     ):
-        # view = UserUpdateView()
+        view = UserUpdateView()
         form_data = {"name": "John Doe"}
         request = request_factory.post(reverse("user_update"), form_data)
 
@@ -59,14 +60,12 @@ class TestUserUpdateView:
         MessageMiddleware(self.dummy_get_response).process_request(request)
         request.user = user
 
-        """
         view.request = request
 
         # Initialize the form
         form = CustomUserChangeForm()
         form.cleaned_data = {}
         view.form_valid(form)
-        """
 
         response = UserUpdateView.as_view()(request)
         user.refresh_from_db()
