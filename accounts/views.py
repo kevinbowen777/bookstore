@@ -26,12 +26,14 @@ class UserDetailView(LoginRequiredMixin, DetailView):
 class UserUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     fields = [
         "name",
+        "age",
         "bio",
         "country",
         "profile_pic",
     ]
     model = User
-    success_message = "%(name)s's profile was updated successfully."
+    success_message = "Your profile was updated successfully."
+    # success_message = "%(name)s's profile was updated successfully."
 
     def get_success_url(self):
         """Send the user back to their own page after a successful update."""
