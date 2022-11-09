@@ -8,7 +8,7 @@
 
 </div>
 
-- A basic bookstore application built using the Django 4.1 web framework
+- A basic bookstore application built using the Django 4.1.x web framework
 
 ##### Table of Contents
  - [Features](#features)
@@ -58,10 +58,14 @@
      - `python manage.py createsuperuser`
      - `python manage.py runserver`
  - Docker installation:
-     - `docker-compose up --build`
-     - `docker-compose exec web python manage.py migrate`
-     - `docker-compose exec web python manage.py createsuperuser`
-     - `docker-compose exec web python manage.py shell_plus`
+     - `docker compose up --build`
+     - `docker compose exec web python manage.py migrate`
+     - `docker compose exec web python manage.py createsuperuser`
+     Additional commands:
+       - `docker compose exec web python manage.py shell_plus`
+         (loads Django shell autoloading project models & classes)
+       - `docker run -it django-start-web bash`
+         (CLI access to container)
  - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
 ---
