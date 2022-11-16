@@ -1,6 +1,7 @@
 # updated 20220904
 # from: https://github.com/github/gitignore
 #
+docker-compose-prod.yml
 LOCAL_APP_NOTES
 node_modules/
 package-lock.json

@@ -11,7 +11,7 @@ services:
     depends_on:
       - db
     environment:
-      - "SECRET_KEY=st-#*pi3SG@!Pvp3A67juq-HuzYf?fDqz5q8bNWt-Hi_zgZZlu-Q"
+      - "SECRET_KEY=<key revoked. 20221117> Never used in prod"
   db:
     image: postgres:11
     volumes:
