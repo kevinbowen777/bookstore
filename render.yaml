@@ -10,7 +10,7 @@ services:
     numInstances: 1
     envVars:
       - key: ALLOWED_HOSTS # Imported from Heroku app
-        value: [&quot;.herokuapp.com&quot;, &quot;localhost&quot;, &quot;127.0.0.1&quot;]
+        value: [".herokuapp.com", "localhost", "127.0.0.1"]
       - key: DATABASE_URL # Render PostgreSQL database
         fromDatabase:
           name: postgresql-animated-85749
