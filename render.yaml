@@ -9,8 +9,6 @@ services:
     plan: free # optional; defaults to starter
     numInstances: 1
     envVars:
-      - key: ALLOWED_HOSTS # Imported from Heroku app
-        value: [".herokuapp.com", "localhost", "127.0.0.1"]
       - key: DATABASE_URL # Render PostgreSQL database
         fromDatabase:
           name: postgresql-animated-85749
