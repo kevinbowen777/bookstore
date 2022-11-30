@@ -36,7 +36,7 @@ Features
    * Debug-toolbar available
    * Examples of using Factories & pytest fixtures in account app testing
    * `shell_plus` with IPython via `django-extensions` package
-   * Nox testing sessions for latest Python 3.9, 3.10, and 3.11
+   * Nox testing sessions for latest Python 3.9, 3.10, 3.11, 3.12
 
      * black
      * Sphinx documentaion generation
@@ -45,7 +45,6 @@ Features
        * flake8
        * flake8-bugbear
        * flake8-docstrings
-       * flake8-import-order
      * safety(python package vulnerability testing)
      * pytest sessions with coverage
 
@@ -110,9 +109,9 @@ Testing
 
 Application Demo
 ----------------
-Live demonstration of application running on Heroku:
+Live demonstration of application:
 
-`kbowen-django-bookstore <https://kbowen-django-bookstore.herokuapp.com/>`_
+TBD
 
 Reporting Bugs
 --------------
