@@ -36,7 +36,7 @@
      - `shell_plus` with IPython via `django-extensions` package
      - Nox testing sessions for latest Python 3.9, 3.10, 3.11, and 3.12
          - black (`nox -s black`)
-         - Sphinx documentaion generation (`nox -s docs`)
+         - Sphinx documentation generation (`nox -s docs`)
          - linting (`nox -s lint`)
              - flake8
              - flake8-bugbear
