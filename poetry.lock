@@ -593,6 +593,18 @@ flake8 = ">=3.0.0"
 dev = ["coverage", "hypothesis", "hypothesmith (>=0.2)", "pre-commit", "tox"]
 
 [[package]]
+name = "flake8-import-order"
+version = "0.18.2"
+description = "Flake8 and pylama plugin that checks the ordering of import statements."
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pycodestyle = "*"
+setuptools = "*"
+
+[[package]]
 name = "friendly"
 version = "0.7.20"
 description = "Friendlier tracebacks in any language."
@@ -1719,7 +1731,7 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "da3a0437274d32086f47b0af10521a8bcff5e51ad37f43025c44b4e2ed6d0c53"
+content-hash = "14cc543703ea9d2458fef6810bdcc3db589c16ccfd689fd44185ad038ae2be48"
 
 [metadata.files]
 alabaster = [
@@ -2067,6 +2079,10 @@ flake8-black = [
 flake8-bugbear = [
     {file = "flake8-bugbear-22.10.27.tar.gz", hash = "sha256:a6708608965c9e0de5fff13904fed82e0ba21ac929fe4896459226a797e11cd5"},
     {file = "flake8_bugbear-22.10.27-py3-none-any.whl", hash = "sha256:6ad0ab754507319060695e2f2be80e6d8977cfcea082293089a9226276bd825d"},
+]
+flake8-import-order = [
+    {file = "flake8-import-order-0.18.2.tar.gz", hash = "sha256:e23941f892da3e0c09d711babbb0c73bc735242e9b216b726616758a920d900e"},
+    {file = "flake8_import_order-0.18.2-py2.py3-none-any.whl", hash = "sha256:82ed59f1083b629b030ee9d3928d9e06b6213eb196fe745b3a7d4af2168130df"},
 ]
 friendly = [
     {file = "friendly-0.7.20-py3-none-any.whl", hash = "sha256:bbab267154b742c5def3d35b6ddb7a3c0101a541ec771dd5f4842ff324c5c7fe"},
