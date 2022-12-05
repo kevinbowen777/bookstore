@@ -28,6 +28,7 @@
      - User registration with email verification & social(GitHub) login
      - [Bootstrap4](https://pypi.org/project/django-bootstrap4/) & [crispy-forms](https://pypi.org/project/django-crispy-forms/) decorations
      - Customizable user profile pages with bio, profile pic, & [country flags](https://pypi.python.org/pypi/django-countries)
+     - For additional links to package resources used in this repository, see the [Package Index](docs/package_index.md)
  - Dev/testing
      - Basic module testing templates
      - [Coverage](https://pypi.org/project/coverage/) reports in `htmlcov` directory
@@ -46,7 +47,6 @@
          - [pytest](https://docs.pytest.org/en/latest/) sessions with
            [pytest-cov](https://pypi.org/project/pytest-cov/) &
            [pytest-django](https://pypi.org/project/pytest-django/) (`coverage run -m pytest`) 
-         - For additional links to package resources used in this repository, see the [Package Index](docs/package_index.md)
 
 ---
 
