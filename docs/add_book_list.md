@@ -31,7 +31,7 @@ Book.objects.create(
     price="49.95",
     cover="covers/dfa_cover_40.jpg"
 )
----------------
+
 Book.objects.create(
     title="Django for Professionals: Production websites with Python & Django",
     author="William S. Vincent",
