@@ -110,7 +110,10 @@ function nox:all {
 
 function poetry:outdated {
   # List any installed packages that are outdated
-  cmd poetry show -ol
+  poetry show -ol
+  # The following command runs twice as fast; but, requires the container
+  # to be running:
+  # cmd poetry show -ol
 }
 
 function poetry:update {
