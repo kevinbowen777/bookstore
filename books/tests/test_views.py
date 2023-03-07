@@ -14,7 +14,6 @@ from ..views import (
     BookDetailView,
     BookListView,
     BookUpdateView,
-    # ReviewCreateView,
 )
 
 
@@ -93,6 +92,7 @@ def test_book_create_form_valid(rf, admin_user):
     # Get the book based on the name
     book = Book.objects.get(title="Programming Python")  # noqa:F811
     # Test that the book matches our form
+    assert response.status_code == 302
     assert book.author == "Mark Lutz"
     assert book.price == 69.00
     assert book.creator == admin_user
@@ -143,17 +143,18 @@ def test_book_update(rf, admin_user, book):  # noqa:F811
 """
 def test_review_create_form_valid(rf, admin_user, book):  # noqa:F811
     form_data = {
-        "book": book.id,
         "review": "This is a great book",
     }
-    url = reverse("review_create", kwargs={'book_id': str(book.id)})
+    url = reverse("review_create", kwargs={"book_id": str(book.id)})
     request = rf.post((url), form_data)
     request.user = admin_user
-    response = ReviewCreateView.as_view()(request)  # noqa:F841
+    callable_obj = ReviewCreateView.as_view()
+    response = callable_obj(request, book.id)  # noqa:F841
     # Get the book based on the name
-    # review = Review.objects.get(review="This is a great book")  # noqa:F811
+    review = Review.objects.get(review="This is a great book")  # noqa:F811
     # Test that the book matches our form
     book.refresh_from_db()
+    assert response.status_code == 302
     assert review.book == book.title
     assert review.review == "This is a great book"
     assert review.creator == admin_user
