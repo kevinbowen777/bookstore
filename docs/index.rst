@@ -16,7 +16,7 @@ Bookstore
    :backlinks: top
    :depth: 2
 
-A basic bookstore application built using the Django 4.1 web framework
+A basic bookstore application built using the Django 4.2.x web framework
 
 Features
 --------
