@@ -89,11 +89,11 @@ DATABASES = {
         "DATABASE_URL": env.dj_db_url(
             "DATABASE_URL", default="postgres://postgres@db/postgres"
         ),
-        "POSTGRES_NAME": env.str("POSTGRES_DB", "postgres"),
-        "POSTGRES_USER": env.str("POSTGRES_USER", "fakeuser"),
-        "POSTGRES_PASSWORD": env.str("POSTGRES_PASSWORD", "password"),
-        "POSTGRES_HOST": env.str("POSTGRES_HOST", "db"),
-        "POSTGRES_PORT": env.int("POSTGRES_PORT", "5432"),
+        "NAME": env.str("POSTGRES_DB", "postgres"),
+        "USER": env.str("POSTGRES_USER", "fakeuser"),
+        "PASSWORD": env.str("POSTGRES_PASSWORD", "password"),
+        "HOST": env.str("POSTGRES_HOST", "db"),
+        "PORT": env.int("POSTGRES_PORT", "5432"),
     }
 }
 
@@ -135,7 +135,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
+# MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
+MEDIA_ROOT = BASE_DIR / "media"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
 
@@ -244,4 +245,4 @@ LOGGING = {
 # hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 # INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # The following is for use locally:
-# INTERNAL_IPS = ["127.0.0.1"]
+INTERNAL_IPS = ["127.0.0.1"]
