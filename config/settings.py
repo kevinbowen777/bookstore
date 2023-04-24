@@ -89,7 +89,7 @@ DATABASES = {
         "DATABASE_URL": env.dj_db_url(
             "DATABASE_URL", default="postgres://postgres@db/postgres"
         ),
-        "NAME": env.str("POSTGRES_DB", "postgres"),
+        "POSTGRES_NAME": env.str("POSTGRES_DB", "postgres"),
         "POSTGRES_USER": env.str("POSTGRES_USER", "fakeuser"),
         "POSTGRES_PASSWORD": env.str("POSTGRES_PASSWORD", "password"),
         "POSTGRES_HOST": env.str("POSTGRES_HOST", "db"),
