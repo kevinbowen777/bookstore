@@ -40,7 +40,7 @@ class BookListView(ListView):
     context_object_name = "book_list"
     login_url = "account_login"
 
-    paginate_by = 10
+    paginate_by = 5
 
 
 class BookUpdateView(LoginRequiredMixin, UpdateView):
