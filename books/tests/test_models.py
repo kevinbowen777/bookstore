@@ -1,9 +1,9 @@
-from accounts.tests.factories import UserFactory
-
 from django.test import TestCase
 
-from .factories import BookFactory
+from accounts.tests.factories import UserFactory
+
 from ..models import Review
+from .factories import BookFactory
 
 
 class BookTests(TestCase):

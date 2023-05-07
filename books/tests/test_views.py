@@ -1,13 +1,10 @@
-from django.urls import reverse
-from django.test import RequestFactory  # noqa:F401
-
 import pytest
-
+from django.test import RequestFactory  # noqa:F401
+from django.urls import reverse
 from pytest_django.asserts import (
     assertContains,
 )
 
-from .factories import book, BookFactory  # noqa:F401
 from ..models import Book
 from ..views import (
     BookCreateView,
@@ -15,7 +12,7 @@ from ..views import (
     BookListView,
     BookUpdateView,
 )
-
+from .factories import BookFactory, book  # noqa:F401
 
 pytestmark = pytest.mark.django_db
 

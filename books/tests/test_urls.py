@@ -1,9 +1,7 @@
+import pytest
 from django.urls import resolve, reverse
 
-import pytest
-
 from .factories import BookFactory
-
 
 pytestmark = pytest.mark.django_db
 
