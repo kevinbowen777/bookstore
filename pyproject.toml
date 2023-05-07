@@ -11,6 +11,7 @@ exclude = '''
   | staticfiles
   | build
   | dist
+  | ^.*\b(migrations)\b.*$
 )/
 '''
 
@@ -21,18 +22,15 @@ source = ["accounts", "books", "config", "pages"]
 branch = true
 source = ["config"]
 omit = [
-    "*/__init__.py",
+    "*conftest.py",
     "*manage.py",
     "*settings*.py",
-    "*urls.py",
-    "*admin.py",
-    "*migrations/*",
-    "*tests/*",
-    "*test_*.py",
-    "*tests.py",
+    "*test.py",
     "*wsgi.py",
-    "*conftest.py",
-    "*/extra*",
+    "*/__init__.py",
+    "*/migrations/*",
+    "*/factories.py",
+    "*/tests/*",
 ]
 plugins = [
     "django_coverage_plugin",
@@ -47,46 +45,75 @@ show_missing = true
 [tool.poetry]
 name = "bookstore"
 version = "0.1.0"
-description = "A Django based web application"
-authors = ["Kevin Bowen <kevin.bowen@gmail.com>"]
+description = "A online booksite created with the Django web framework"
+authors = [
+    "Kevin Bowen <kevin.bowen@gmail.com>",
+]
+maintainers = [
+]
 license = "MIT"
+
+readme = "README.md"
+
+homepage = ""
+repository = "https://github.com/kevinbowen777/bookstore.git"
+documentation = ""
+
+keywords = ["django", "web-application", "bookstore"]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "4.2.1"
 
-environs = {extras = ["django"], version = "^9.5.0"}
-psycopg2-binary = "^2.9.5"
 django-crispy-forms = "^2.0"
-django-extensions = "^3.1.5"
 django-allauth = "^0.54.0"
-Pillow = "^9.1.0"
-whitenoise = "^6.0.0"
-gunicorn = "^20.1.0"
+environs = { version = "^9.5.0", extras = ["django"] }
+django-extensions = "^3.2"
+whitenoise = "^6.1.0"
+psycopg2-binary = "^2.9.5"
+Pillow = "^9.3.0"
 django-countries = "^7.3.2"
+gunicorn = "~=20.1.0"
 crispy-bootstrap4 = "^2022.1"
 
 [tool.poetry.group.dev.dependencies]
+django-debug-toolbar = "^4.0.0"
 pre-commit = "^3.0.0"
 black = "^23.0.0"
-django-debug-toolbar = "^4.0.0"
-pytest = "^7.1.2"
-pytest-django = "^4.5.2"
-coverage = {extras = ["toml"], version = "^7.0.0"}
-pytest-cov = "^4.0.0"
 django-test-plus = "^2.2.0"
+pytest = "^7.2.0"
 pytest-sugar = "^0.9.4"
 ipython = "^8.4.0"
 friendly = "^0.7.0"
 colorama = "^0.4.4"
 django-coverage-plugin = "^3.0.0"
-django-pytest = "^0.2.0"
-factory-boy = "^3.2.0"
-nox = "^2023.4.22"
+nox = "2023.4.22"
 safety = "2.4.0b1"
+factory-boy = "^3.2.0"
 pip-check = "^2.7"
-pip-audit = "~2.5.5"
+pip-audit = "^2.5"
 Sphinx = "^7.0.0"
+coverage = {extras = ["toml"], version = "^7.0.0"}
+pytest-cov = "^4.0.0"
+pytest-django = "^4.5.2"
+django-pytest = "^0.2.0"
 ruff = "^0.0.265"
 
 [tool.pytest.ini_options]
@@ -94,7 +121,7 @@ DJANGO_SETTINGS_MODULE = "config.settings"
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
 filterwarnings = [
     # "ignore::django.utils.deprecation.RemovedInDjango50Warning",
-] 
+]
 
 [tool.ruff]
 select = [
