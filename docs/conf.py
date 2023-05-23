@@ -13,7 +13,7 @@ html_theme_options = {
     'style_external_links': False,
     'vcs_pageview_mode': '',
     'style_nav_header_background': 'white',
-    # Toc options
+    # ToC options
     'collapse_navigation': True,
     'sticky_navigation': True,
     'navigation_depth': 4,
