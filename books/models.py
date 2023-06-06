@@ -11,18 +11,16 @@ class Book(models.Model):
     author = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     publisher = models.CharField(max_length=50, blank=True)
-    pubdate = models.DateField(
-        null=True, blank=True, help_text="Date of Publication"
-    )
+    pubdate = models.DateField(null=True, blank=True, help_text="Date of Publication")
     description = models.TextField(
         max_length=1000,
         blank=True,
         help_text="Enter a brief description of the book.",
     )
     cover = models.ImageField(upload_to="covers/", blank=True)
-    creator = models.ForeignKey(
-        get_user_model(), null=True, on_delete=models.SET_NULL
-    )
+    creator = models.ForeignKey(get_user_model(), null=True, on_delete=models.SET_NULL)
+
+    objects = models.Manager()
 
     class Meta:
         indexes = [
