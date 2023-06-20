@@ -34,3 +34,13 @@ ul.no-bullets {
   /* padding: 0;  Remove padding */
   margin: 0; /* Remove margins */
 }
+
+ul.no-style {
+  list-style-type: none; /* Remove bullets */
+  margin: 0; /* Remove margins */
+}
+
+.copyright {
+  color: white;
+  font-size: 70%;
+}
