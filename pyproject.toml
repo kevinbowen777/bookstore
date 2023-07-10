@@ -118,7 +118,7 @@ coverage = { version = "^7.0.0", extras = ["toml"] }
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
 django-pytest = "^0.2.0"
-ruff = "^0.0.276"
+ruff = ">= 0.0.275, < 0.0.300"
 djlint = "^1.31.0"
 werkzeug = "^2.3.6"
 pyopenssl = "^23.2.0"
