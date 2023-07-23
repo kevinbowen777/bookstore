@@ -21,7 +21,6 @@ class HomePageTests(SimpleTestCase):
 
     def test_homepage_template(self):
         self.assertTemplateUsed("pages/home.html")
-        # self.assertTemplateUsed(self.response, "home.html")
 
     def test_homepage_contains_correct_html(self):
         self.assertContains(self.response, "Welcome to the Bookstore")
@@ -29,7 +28,7 @@ class HomePageTests(SimpleTestCase):
     def test_homepage_does_not_contain_incorrect_html(self):
         self.assertNotContains(self.response, "This text does not belong.")
 
-    def test_hompage_url_resolves_homepageview(self):
+    def test_homepage_url_resolves_homepageview(self):
         view = resolve("/")
         self.assertEqual(view.func.__name__, HomePageView.as_view().__name__)
 
@@ -39,20 +38,20 @@ class AboutPageTests(SimpleTestCase):
         url = reverse("about")
         self.response = self.client.get(url)
 
-    def test_aboutpage_status_code(self):
+    def test_about_page_status_code(self):
         self.assertEqual(self.response.status_code, 200)
 
-    def test_aboutpage_template(self):
+    def test_about_page_template(self):
         self.assertTemplateUsed("pages/about.html")
         # self.assertTemplateUsed(self.response, "about.html")
 
-    def test_aboutpage_contains_correct_html(self):
+    def test_about_page_contains_correct_html(self):
         self.assertContains(self.response, "About Page")
 
-    def test_aboutpage_does_not_contain_incorrect_html(self):
+    def test_about_page_does_not_contain_incorrect_html(self):
         self.assertNotContains(self.response, "This text does not belong.")
 
-    def test_aboupage_url_resolves_homepageview(self):
+    def test_about_page_url_resolves_about_pageview(self):
         view = resolve("/about/")
         self.assertEqual(view.func.__name__, AboutPageView.as_view().__name__)
 
@@ -86,10 +85,6 @@ class ContactViewTests(SimpleTestCase):
             ContactView.__name__,
         )
 
-    def test_contact_page_form_is_valid(self):
-        form = ContactForm(data=self.form_data)
-        self.assertTrue(form.is_valid())
-
     def test_header_injection(self):
         error_occured = True
         try:
@@ -105,6 +100,10 @@ class ContactViewTests(SimpleTestCase):
         except BadHeaderError:
             error_occured = True
         self.assertFalse(error_occured)
+
+    def test_contact_page_form_is_valid(self):
+        form = ContactForm(data=self.form_data)
+        self.assertTrue(form.is_valid())
 
 
 class SuccessViewTests(SimpleTestCase):
