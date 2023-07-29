@@ -3,6 +3,10 @@ Create new reviews
 
 Create batch reviews for testing bookstore application
 
+This page used to set up a small collection of book reviews in the database to use for
+testing purposes. Feel free to add, remove, or change the list to suit your
+needs/preferences.
+
 Instructions
 ------------
 
@@ -12,8 +16,8 @@ In the application directory, run the following command:
 
     $ python manage.py shell_plus
 
-Sample user list
-----------------
+Sample review list
+^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 

@@ -1,7 +1,11 @@
 Add book list
 =============
 
-Template for adding a list of books to bookstore Django application
+This page used to set up a small collection of books in the database to use for
+testing purposes. Feel free to add, remove, or change the list to suit your
+needs/preferences.
+
+Template for adding a list of books to bookstore Django application:
 
 .. code-block:: console
 
@@ -21,7 +25,7 @@ In the application directory, run the following command:
     $ python manage.py shell_plus
 
 Sample book list
-----------------
+^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 

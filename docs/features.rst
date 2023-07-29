@@ -4,18 +4,18 @@ Features
 
  * Application
 
-   * Add book reviews
+   * Add user-generated book reviews
    * Upload book covers
    * Basic search capability
    * User registration with email verification & social(GitHub) login using django-allauth_
    * Bootstrap4_ & crispy-forms_ decorations
-   * Customizable user profile pages with bio, profile pic, & country-flags_
+   * Customizable user profile pages with bio, profile pic, & `country flags`_
    * For links to additional packages used in this repository, see the :doc:`Package Index <package_index>`
  * Dev/testing
 
-   * coverage_ reports in `htmlcov` directory.
+   * coverage_ reports are available in the `htmlcov` directory.
    * django-debug-toolbar_ available. See notes in `config/settings.py` for enabling.
-   * Examples of using Factories_ & pytest_ fixtures in account app testing.
+   * Examples of using factories_ & pytest_ fixtures in account app testing.
    * shell_plus_ with IPython_ via the django-extensions_ package.
    * pre-commit_
    * nox_ testing sessions for latest Python 3.9, 3.10, and 3.11, 3.12.
@@ -23,7 +23,7 @@ Features
      * black_
      * Sphinx_ documentation generation
      * linting
-       
+
        * ruff_
      * safety_ (python package vulnerability testing)
      * pytest_ sessions with pytest-cov_ & pytest-django_
@@ -38,7 +38,7 @@ If you get tired of typing ``./run`` you can always create a shell alias with ``
  .. _django-allauth: https://pypi.org/project/django-allauth/
  .. _Bootstrap4: https://pypi.org/project/django-bootstrap4/
  .. _crispy-forms: https://pypi.org/project/django-crispy-forms/
- .. _country-flags: https://pypi.python.org/pypi/django-countries
+ .. _country flags: https://pypi.python.org/pypi/django-countries
  .. _coverage: https://pypi.org/project/coverage/ 
  .. _htmlcov:
  .. _django-debug-toolbar: https://pypi.org/project/django-debug-toolbar/
