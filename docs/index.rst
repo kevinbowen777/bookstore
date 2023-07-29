@@ -1,13 +1,13 @@
 Bookstore 
 =========
 
-The bookstore_ application is built using the Django 4.2.x web application framework and is part of the collection of `Web Framework Projects`_ assembled by Kevin Bowen.
+The bookstore_ application is built using the Django 4.2.x web application framework and is part of the collection of `Web Framework Projects`_ .
 
 .. _bookstore: https://github.com/kevinbowen777/bookstore
 .. _Web Framework Projects: https://github.com/kevinbowen777/web-project-index
 
-Using this Project
-------------------
+Getting Started
+---------------
 
 :doc:`features`
     Outline of the project's basic functionality.
@@ -16,24 +16,24 @@ Using this Project
     Project configuration and customization options.
 
 :doc:`installing`
-    How to install the project directly on your local machine as well as in a
-    Docker container.
+    How to install the project directly on your local machine, or in a Docker
+    container.
 
-Development
------------
+Project Information
+-------------------
 
 :doc:`changelog`
-    The project development changelog
+    The project development changelog.
 
 :doc:`contributing`
     How to contribute to improving the project, reporting bugs, and submitting
     feature requests.
 
 :doc:`license`
-    Terms and conditions for use of this project
+    Terms and conditions for use of this project.
 
 :doc:`testing`
-    Instructions for running tests against the project
+    Instructions for running tests against the project.
 
 .. Hidden TOCs
 
@@ -43,15 +43,22 @@ Development
    :hidden:
 
    features
-   configuring
    installing
+   configuring
    package_index
+
+.. toctree::
+   :caption: Testing
+   :maxdepth: 1
+   :hidden:
+
+   testing
    create_new_users
    add_book_list
    add_reviews
-   testing
 
 .. toctree::
+   :caption: Reference
    :maxdepth: 1
    :hidden:
 

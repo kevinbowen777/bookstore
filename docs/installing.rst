@@ -1,10 +1,10 @@
 Installation
 ============
 
-How to install and use the project
-----------------------------------
+Cloning the project
+-------------------
 
-To install the bookstore project, run this command in your terminal:
+To install the ``bookstore`` project, run the following command in your terminal:
 
 .. code-block:: console
 
@@ -12,7 +12,7 @@ To install the bookstore project, run this command in your terminal:
    $ cd bookstore
 
 Local installation
-------------------
+^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
@@ -22,22 +22,23 @@ Local installation
    $ python manage.py createsuperuser
 
 Docker installation
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
    $ docker compose up --build
    $ docker compose python manage.py migrate
    $ docker compose python manage.py createsuperuser
+
    Additional commands:
    $ docker compose exec web python manage.py shell_plus
-     (loads Django shell autoloading project models & classes)
-   $ docker run -it bookstore-web bash`
+     (loads Django shell autoloading the project models & classes)
+   $ docker run -it bookstore-web bash
      (CLI access to container)
 
 Pre-commit installation
------------------------
-   To add the hook, run the following command in the poetry shell:
+^^^^^^^^^^^^^^^^^^^^^^^
+To add the pre-commit hooks, run the following command in the poetry shell:
 
 .. code-block:: console
 
