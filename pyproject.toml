@@ -1,52 +1,3 @@
-[tool.black]
-line-length = 88
-# include =
-exclude = '''
-/(
-    \.git
-  | __pycache__
-  | .pytest_cache
-  | .venv
-  | staticfiles
-  | build
-  | dist
-  | ^.*\b(migrations)\b.*$
-)/
-'''
-
-[tool.coverage.paths]
-source = ["accounts", "books", "config", "pages"]
-
-[tool.coverage.run]
-branch = true
-source = ["config"]
-omit = [
-    "*conftest.py",
-    "*manage.py",
-    "*settings*.py",
-    "*test.py",
-    "*wsgi.py",
-    "*/__init__.py",
-    "*/migrations/*",
-    "*/factories.py",
-    "*/tests/*",
-]
-plugins = [
-    "django_coverage_plugin",
-]
-
-[tool.coverage.django_coverage_plugin]
-template_extensions = "html, txt, tex, email"
-
-[tool.coverage.report]
-show_missing = true
-
-[tool.djlint]
-exclude="htmlcov"
-files=["templates/"]
-indent=2
-preserve_blank_lines=true
-
 [tool.poetry]
 name = "bookstore"
 version = "0.2.0"
@@ -98,6 +49,7 @@ Pillow = "^10.0"
 django-countries = "^7.3.2"
 gunicorn = "^21.0"
 crispy-bootstrap4 = "^2022.1"
+django-types = "^0.17.0"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^4.0.0"
@@ -123,6 +75,90 @@ djlint = "^1.31.0"
 werkzeug = "^2.3.6"
 pyopenssl = "^23.2.0"
 furo = "^2023.5.20"
+
+[tool.black]
+line-length = 88
+# include =
+exclude = '''
+/(
+    \.git
+  | __pycache__
+  | .pytest_cache
+  | .venv
+  | staticfiles
+  | build
+  | dist
+  | ^.*\b(migrations)\b.*$
+)/
+'''
+
+[tool.coverage.paths]
+source = ["accounts", "books", "config", "pages"]
+
+[tool.coverage.run]
+branch = true
+source = ["config"]
+omit = [
+    "*conftest.py",
+    "*manage.py",
+    "*settings*.py",
+    "*test.py",
+    "*wsgi.py",
+    "*/__init__.py",
+    "*/migrations/*",
+    "*/factories.py",
+    "*/tests/*",
+]
+plugins = [
+    "django_coverage_plugin",
+]
+
+[tool.coverage.django_coverage_plugin]
+template_extensions = "html, txt, tex, email"
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.djlint]
+exclude="htmlcov"
+files=["templates/"]
+indent=2
+preserve_blank_lines=true
+
+[tool.pyright]
+include = ["config", "accounts", "books", "pages",]
+exclude = ["**/tests",
+    "**/__pycache__",
+    "**/migrations",
+]
+ignore = ["docs/_build"]
+defineConstant = { DEBUG = true }
+stubPath = ""
+venv = "bookstore-JiWWEf8S-py3.11"
+venvPath = "../../../venvs"
+
+typeCheckingMode = "basic"
+useLibraryCodeForTypes = true
+strictListInference = true
+strictDictionaryInference = true
+reportConstantRedefinition = "error"
+reportOptionalCall = "error"
+reportOptionalContextManager = "error"
+reportOptionalIterable = "error"
+reportOptionalMemberAccess = "error"
+reportMissingImports = true
+reportOptionalOperand = "error"
+reportOptionalSubscript = "error"
+reportUnnecessaryCast = "warning"
+reportUnnecessaryComparison = "error"
+reportUnnecessaryTypeIgnoreComment = "warning"
+
+pythonVersion = "3.11"
+pythonPlatform = "Linux"
+
+executionEnvironments = [
+  { root = ".", pythonVersion = "3.11", extraPaths = [ "accounts", "config", "pages" ] },
+]
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
