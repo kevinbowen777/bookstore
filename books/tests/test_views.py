@@ -85,7 +85,7 @@ def test_book_create_form_valid(rf, admin_user):
     }
     request = rf.post(reverse("book_add"), form_data)
     request.user = admin_user
-    response = BookCreateView.as_view()(request)  # noqa:F841
+    response = BookCreateView.as_view()(request)
     # Get the book based on the name
     book = Book.objects.get(title="Programming Python")  # noqa:F811
     # Test that the book matches our form

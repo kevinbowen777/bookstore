@@ -3,7 +3,7 @@ from pathlib import Path
 
 from environs import Env
 
-# import socket  # noqa: E402 # Comment out if not using debug_toolbar
+# import socket  # Comment out if not using debug_toolbar
 
 
 env = Env()
@@ -101,16 +101,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa:E501,B950
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa:E501,B950
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa:E501,B950
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa:E501,B950
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
