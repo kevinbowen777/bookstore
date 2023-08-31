@@ -12,7 +12,7 @@ from ..views import (
     BookListView,
     BookUpdateView,
 )
-from .factories import BookFactory, book  # noqa:F401
+from .factories import BookFactory
 
 pytestmark = pytest.mark.django_db
 
