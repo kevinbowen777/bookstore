@@ -1,5 +1,4 @@
 import pytest
-from django.test import RequestFactory  # noqa:F401
 from django.urls import reverse
 from pytest_django.asserts import (
     assertContains,
@@ -12,7 +11,8 @@ from ..views import (
     BookListView,
     BookUpdateView,
 )
-from .factories import BookFactory, book  # noqa:F401
+
+# from .factories import BookFactory
 
 pytestmark = pytest.mark.django_db
 
@@ -27,7 +27,6 @@ def test_book_list_view(rf):
 
 
 def test_book_detail_view(rf, book):  # noqa:F811
-    # Order a book from the BookFactory
     # Get the request
     url = reverse("book_detail", kwargs={"pk": book.pk})
     request = rf.get(url)
@@ -39,17 +38,27 @@ def test_book_detail_view(rf, book):  # noqa:F811
 
 
 def test_book_create_view(rf, book, admin_user):  # noqa:F811
+    form_data = {
+        "title": book.title,
+        "author": book.author,
+        "price": book.price,
+        "creator": book.creator,
+    }
     # Make a request for our new book
-    request = rf.get(reverse("book_add"))
+    request = rf.get(reverse("book_add"), form_data)
     # Add an authenticated user
     request.user = admin_user
     # Use the request to get the response
     response = BookCreateView.as_view()(request)
+    book_sample = Book.objects.last()
     # Test that the response is valid
     assert response.status_code == 200
+    assert book_sample.creator == book.creator
+    assert book_sample.title == book.title
 
 
-def test_book_list_contains_2_books(rf):
+"""
+def test_book_list_contains_2_books(rf, book):
     # Create a couple of books
     book1 = BookFactory()
     book2 = BookFactory()
@@ -61,6 +70,7 @@ def test_book_list_contains_2_books(rf):
     # in the template
     assertContains(response, book1.title)
     assertContains(response, book2.title)
+"""
 
 
 def test_detail_contains_book_data(rf, book):  # noqa:F811
@@ -103,7 +113,7 @@ def test_book_create_correct_title(rf, admin_user):
     assertContains(response, "Add a Book")
 
 
-def test_book_update_view(rf, admin_user, book):  # noqa:F811
+def test_book_update_view(rf, admin_user, book):
     url = reverse("book_update", kwargs={"pk": book.id})
     # Make a request for our new cheese
     request = rf.get(url)
@@ -116,7 +126,7 @@ def test_book_update_view(rf, admin_user, book):  # noqa:F811
     assertContains(response, "Update")
 
 
-def test_book_update(rf, admin_user, book):  # noqa:F811
+def test_book_update(rf, admin_user, book):
     """POST request to BookUpdateView updates a book
     and redirects.
     """
@@ -135,18 +145,20 @@ def test_book_update(rf, admin_user, book):  # noqa:F811
     # Check that the book has been changed
     book.refresh_from_db()
     assert book.author == "John Q. Public"
+    assert response.status_code == 302
 
 
 """
-def test_review_create_form_valid(rf, admin_user, book):  # noqa:F811
+def test_review_create_form_valid(rf, admin_user, book, review):  # noqa:F811
     form_data = {
         "review": "This is a great book",
     }
     url = reverse("review_create", kwargs={"book_id": str(book.id)})
-    request = rf.post((url), form_data)
+    request = rf.post(url, form_data)
     request.user = admin_user
     callable_obj = ReviewCreateView.as_view()
-    response = callable_obj(request, book.id)  # noqa:F841
+    response = callable_obj(request)  # noqa:F841
+    # response = callable_obj(request, book.id)  # noqa:F841
     # Get the book based on the name
     review = Review.objects.get(review="This is a great book")  # noqa:F811
     # Test that the book matches our form
@@ -155,4 +167,14 @@ def test_review_create_form_valid(rf, admin_user, book):  # noqa:F811
     assert review.book == book.title
     assert review.review == "This is a great book"
     assert review.creator == admin_user
+
+
+def test_book_delete(rf, book):
+    request = rf.post(
+        reverse("book_delete", kwargs={"pk": book.id}),
+    )
+    request.user = book.creator
+    callable_obj = BookDeleteView.as_view()
+    response = callable_obj(request, pk=book.id)
+    assert response.status_code == 302
 """

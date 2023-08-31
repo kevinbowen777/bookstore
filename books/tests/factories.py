@@ -1,15 +1,9 @@
 import factory
 import factory.fuzzy
-import pytest
 
 from accounts.tests.factories import UserFactory
 
-from ..models import Book
-
-
-@pytest.fixture
-def book():
-    return BookFactory()
+from ..models import Book, Review
 
 
 class BookFactory(factory.django.DjangoModelFactory):
@@ -20,3 +14,12 @@ class BookFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = Book
+
+
+class ReviewFactory(factory.django.DjangoModelFactory):
+    book = factory.SubFactory(BookFactory)
+    review = factory.fuzzy.FuzzyText(length=25, prefix="The Review of ")
+    creator = factory.SubFactory(UserFactory)
+
+    class Meta:
+        model = Review

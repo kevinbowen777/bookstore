@@ -1,8 +1,8 @@
 import pytest
 from django.test import RequestFactory
 
-from accounts.models import CustomUser
 from accounts.tests.factories import UserFactory
+from books.tests.factories import BookFactory, ReviewFactory
 
 
 @pytest.fixture(autouse=True)
@@ -11,10 +11,20 @@ def media_storage(settings, tmpdir):
 
 
 @pytest.fixture
-def user() -> CustomUser:
+def user():
     return UserFactory()
 
 
 @pytest.fixture
 def request_factory() -> RequestFactory:
     return RequestFactory()
+
+
+@pytest.fixture
+def book():
+    return BookFactory()
+
+
+@pytest.fixture
+def review():
+    return ReviewFactory()
