@@ -1,26 +1,28 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}Books{% endblock title %}
+{% block title %}
+  Books
+{% endblock title %}
 
 {% block content %}
-<div class="container">
-  <p>
-  <h2>Our Book list</h2>
-  <p>Don't see a book listed here?</p>
+  <div class="container">
     <p>
-      <a class="btn btn-primary"
-        href="{% url 'book_add' %}" role="button">
-        Add a new book
-      </a>
+      <h2>Our Book list</h2>
+      <p>Don't see a book listed here?</p>
+      <p>
+        <a class="btn btn-primary" href="{% url 'book_add' %}" role="button">Add a new book</a>
+      </p>
+      {% for book in book_list %}
+        <div>
+          <ul class="no-bullets">
+            <li>
+              <a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
+            </li>
+          </ul>
+        </div>
+      {% endfor %}
     </p>
-  {% for book in book_list %}
-    <div>
-      <ul class="no-bullets">
-          <li><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></li>
-      </ul>
-    </div>
-  {% endfor %}
-  </p>
-  <hr/>
-</div>
+    <hr />
+  </div>
+  <div class="clear"></div>
 {% endblock content %}
