@@ -8,6 +8,12 @@ h2 a:hover {
   font-weight: 400;
 }
 
+/* prevents footer from blocking body content */
+.clear {
+  clear: both;
+  height: 60px;
+}
+
 .bookcover {
   height: 350px;
   float: left;
@@ -42,5 +48,5 @@ ul.no-style {
 
 .copyright {
   color: white;
-  font-size: 70%;
+  font-size: 60%;
 }
