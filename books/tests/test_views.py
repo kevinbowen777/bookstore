@@ -148,6 +148,17 @@ def test_book_update(rf, admin_user, book):
     assert response.status_code == 302
 
 
+@pytest.mark.django_db
+def test_sitemap(client, ten_books):
+    response = client.get("/sitemap.xml")
+    xml = response.content.decode("utf-8")
+    expected_books = [p for p in ten_books]
+    assert response.status_code == 200
+    assert len(expected_books) == 10
+    assert "<loc>" in xml
+    # assert "<lastmod>" in xml
+
+
 """
 def test_review_create_form_valid(rf, admin_user, book, review):  # noqa:F811
     form_data = {
