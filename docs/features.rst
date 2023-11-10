@@ -18,7 +18,7 @@ Features
    * Examples of using factories_ & pytest_ fixtures in account app testing.
    * shell_plus_ with IPython_ via the django-extensions_ package.
    * pre-commit_
-   * nox_ testing sessions for latest Python 3.9, 3.10, and 3.11, 3.12.
+   * nox_ testing sessions for latest Python 3.10, and 3.11, 3.12.
 
      * black_
      * Sphinx_ documentation generation
@@ -52,7 +52,7 @@ If you get tired of typing ``./run`` you can always create a shell alias with ``
  .. _nox: https://pypi.org/project/nox/
  .. _black: https://pypi.org/project/black/
  .. _Sphinx: https://pypi.org/project/Sphinx/
- .. _ruff: https://beta.ruff.rs/docs/ 
+ .. _ruff: https://beta.ruff.rs/docs/
  .. _safety: https://pypi.org/project/safety/
  .. _pytest-cov: https://pypi.org/project/pytest-cov/
  .. _pytest-django: https://pypi.org/project/pytest-django/
