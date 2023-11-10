@@ -34,19 +34,18 @@ The following sessions are available to run via ``nox``:
     - black-3.12 -> Run black code formatter.
     - black-3.11 -> Run black code formatter.
     - black-3.10 -> Run black code formatter.
-    - black-3.9 -> Run black code formatter.
     - docs-3.12 -> Build the documentation.
     - docs-3.11 -> Build the documentation.
     - docs-3.10 -> Build the documentation.
-    - docs-3.9 -> Build the documentation.
     * lint-3.12 -> Lint using ruff.
     * lint-3.11 -> Lint using ruff.
     * lint-3.10 -> Lint using ruff.
-    * lint-3.9 -> Lint using ruff.
+    * pyright-3.10 -> Check types
+    * pyright-3.11 -> Check types
+    * pyright-3.12 -> Check types
     * safety-3.12 -> Scan dependencies for insecure packages.
     * safety-3.11 -> Scan dependencies for insecure packages.
     * safety-3.10 -> Scan dependencies for insecure packages.
-    * safety-3.9 -> Scan dependencies for insecure packages.
     * tests-3.12 -> Run the test suite.
     * tests-3.11 -> Run the test suite.
     * tests-3.10 -> Run the test suite.
