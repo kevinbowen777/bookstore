@@ -1,4 +1,4 @@
-Bookstore 
+Bookstore
 =========
 
 The bookstore_ application is built using the Django 4.0.x web application framework and is part of the collection of `Web Framework Projects`_ .
