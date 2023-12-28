@@ -1,17 +1,24 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}Delete Review - {{ review.book.title }}{% endblock title %}
+{% block title %}
+  Delete Review - {{ review.book.title }}
+{% endblock title %}
 
 {% block content %}
-<div class="container">
-  <p>
-  <h3>Delete your review?</h3>
-  <form action="" method="post">{% csrf_token %}
-      <p>Are you sure you want to delete your review for <strong>"{{ review.book.title }}"</strong>?</p>
-      <p><em>"{{ review.review }}"</em></p>
-    <button class="btn btn-danger ml-2" type="submit">Confirm</button>
-    <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
-  </form>
-  </p>
-</div>
+  <div class="container">
+    <p>
+      <h3>Delete your review?</h3>
+      <form action="" method="post">
+        {% csrf_token %}
+        <p>
+          Are you sure you want to delete your review for <strong>"{{ review.book.title }}"</strong>?
+        </p>
+        <p>
+          <em>"{{ review.review }}"</em>
+        </p>
+        <button class="btn btn-danger ml-2" type="submit">Confirm</button>
+        <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
+      </form>
+    </p>
+  </div>
 {% endblock content %}

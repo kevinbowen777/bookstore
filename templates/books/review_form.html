@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}{{ view.action|default:"Add" }} Book Review{% endblock title %}
+{% block title %}
+  {{ view.action|default:"Add" }} Book Review
+{% endblock title %}
 
 {% block content %}
-<div class="container">
-  <p>
-    {% with action=view.action|default:"Add" %}
-    <h2>{{ action }} Book Review: {{ review.book.title }}</h2>
-      <form class="col-md-6" method="post" action=".">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-primary">{{ action }}</button>
-        <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
-      </form>
-  </p>
-</div>
-{% endwith %}
+  <div class="container">
+    <p>
+      {% with action=view.action|default:"Add" %}
+        <h2>{{ action }} Book Review: {{ review.book.title }}</h2>
+        <form class="col-md-6" method="post" action=".">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <button type="submit" class="btn btn-primary">{{ action }}</button>
+          <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
+        </form>
+      </p>
+    </div>
+  {% endwith %}
 {% endblock content %}
