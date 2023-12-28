@@ -23,6 +23,7 @@ Using ``coverage``
    $ coverage run -m pytest
    $ coverage report
    $ coverage html (this will generate html reports available in the ``htmlcov`` directory)
+   $ this is a new line
 
 Using the ``nox`` test suite
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
