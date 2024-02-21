@@ -1,4 +1,5 @@
 """Settings for the kbowen-django-bookstore template project."""
+
 from pathlib import Path
 
 from environs import Env
