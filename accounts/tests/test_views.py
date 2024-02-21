@@ -1,4 +1,5 @@
 """Test Views for bookstore user accounts."""
+
 import pytest
 from django.contrib.auth import get_user_model
 from django.contrib.messages.middleware import MessageMiddleware
