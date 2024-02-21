@@ -1,11 +1,11 @@
 """Nox sessions - bookstore."""
+
 import tempfile
 
 import nox
 
 PYTHON_VERSIONS = ["3.12", "3.11", "3.10"]
-
-nox.options.sessions = "lint", "safety", "tests"
+nox.options.sessions = "lint", "coverage", "safety", "tests"
 locations = (
     "accounts",
     "books",
@@ -54,6 +54,17 @@ def black(session):
 
 
 @nox.session(python=PYTHON_VERSIONS)
+def coverage(session):
+    """Build JSON coverage report."""
+    install_with_constraints(session, "coverage")
+    session.run("coverage", "run", "-p", "-m", "pytest")
+    session.run("coverage", "combine")
+    session.run("coverage", "report", "-m", "--skip-covered")
+    session.run("coverage", "json", "-o", "htmlcov/coverage.json")
+    session.run("coverage", "html")
+
+
+@nox.session(python=PYTHON_VERSIONS)
 def docs(session):
     """Build the documentation."""
     install_with_constraints(session, "sphinx")
@@ -73,7 +84,7 @@ def lint(session):
 
 @nox.session(python=PYTHON_VERSIONS)
 def pyright(session):
-    """Run black code formatter."""
+    """Run pyright type checker."""
     session.run("pyright", external=True)
 
 
@@ -124,7 +135,6 @@ def tests(session):
         "pytest-cov",
         "pytest-django",
     )
-    # session.run("pytest", *args)
     session.run(
         "python",
         "-Wonce::DeprecationWarning",
