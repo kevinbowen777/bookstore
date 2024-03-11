@@ -46,6 +46,11 @@ ul.no-style {
   margin: 0; /* Remove margins */
 }
 
+.profile_pic {
+  height: 300px;
+  width: auto;
+}
+
 .copyright {
   color: white;
   font-size: 60%;
