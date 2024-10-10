@@ -1,7 +1,7 @@
 Bookstore
 =========
 
-The bookstore_ application is built using the Django 4.0.x web application framework and is part of the collection of `Web Framework Projects`_ .
+The bookstore_ application is built using the Django 5.1.x web application framework and is part of the collection of `Web Framework Projects`_ .
 
 .. _bookstore: https://github.com/kevinbowen777/bookstore
 .. _Web Framework Projects: https://github.com/kevinbowen777/web-project-index

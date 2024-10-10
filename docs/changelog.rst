@@ -2,10 +2,10 @@
 Changelog
 *********
 
-0.2.0
+0.3.1
 =====
 
-:Date: July 24, 2023
+:Date: Oct 10, 2024
 
 Features
 --------

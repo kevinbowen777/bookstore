@@ -9,7 +9,7 @@
 
 </div>
 
-- A basic bookstore application built using the Django 5.0.x web framework
+- A basic bookstore application built using the Django 5.1.x web framework
 
 ##### Table of Contents
  - [Features](#features)
@@ -36,7 +36,7 @@
      - [Debug-toolbar](https://pypi.org/project/django-debug-toolbar/) available. See notes in `config/settings.py` for enabling.
      - Examples of using [Factories](https://pypi.org/project/factory-boy/) & [pytest](https://pypi.org/project/pytest/) fixtures in account app testing
      - [shell_plus](https://django-extensions.readthedocs.io/en/latest/shell_plus.html) with [IPython](https://pypi.org/project/ipython/) via [django-extensions](https://pypi.python.org/pypi/django-extensions/) package
-     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.10, 3.11, and 3.12
+     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.10, 3.11, 3.12, and 3.13
          - [Coverage](https://pypi.org/project/coverage/) (`nox -s coverage`)
          - [Sphinx](https://pypi.org/project/Sphinx/) documentaion generation (`nox -s lint`)
          - linting (`nox -s lint`)
@@ -86,8 +86,8 @@ able to run `run` instead of `./run`.*
 ### Testing
  - `docker-compose exec web python manage.py test`
  - `coverage run -m pytest`
- - Nox (includes sessions for black, Sphinx documentation, lint, safety, tests)
-     - testing supported for Python 3.10, 3.11, 3.12
+ - Nox (includes sessions for black, Sphinx documentation, lint, pyright, safety, tests)
+     - testing supported for Python 3.10, 3.11, 3.12, 3.13
      - e.g. `nox`, `nox -rs lint-3.11`, `nox -s tests`
        - `nox`
        - `nox -s black-3.12`
