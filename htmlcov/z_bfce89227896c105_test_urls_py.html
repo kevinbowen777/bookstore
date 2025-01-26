@@ -78,7 +78,7 @@
             <a id="nextFileLink" class="nav" href="z_bfce89227896c105_test_views_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.10">coverage.py v7.6.10</a>,
-            created at 2025-01-12 19:45 -0800
+            created at 2025-01-26 11:57 -0800
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -129,12 +129,12 @@
     <p class="run"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t"><span class="key">def</span> <span class="nam">test_book_detail_reverse</span><span class="op">(</span><span class="nam">book</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs34" class="ctx">(empty)</label></span></p>
     <p class="pln"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">    <span class="str">"""book_detail should reverse to /books/uuid."""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">    <span class="nam">url</span> <span class="op">=</span> <span class="nam">reverse</span><span class="op">(</span><span class="str">"book_detail"</span><span class="op">,</span> <span class="nam">kwargs</span><span class="op">=</span><span class="op">{</span><span class="str">"pk"</span><span class="op">:</span> <span class="nam">book</span><span class="op">.</span><span class="nam">id</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><input type="checkbox" id="ctxs36"><span class="r"><label for="ctxs36" class="ctx">1 ctx</label></span><span class="ctxs">1b</span></p>
-    <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">    <span class="key">assert</span> <span class="nam">url</span> <span class="op">==</span> <span class="str">f"/books/{book.id}/"</span>&nbsp;</span><input type="checkbox" id="ctxs37"><span class="r"><label for="ctxs37" class="ctx">1 ctx</label></span><span class="ctxs">1b</span></p>
+    <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">    <span class="key">assert</span> <span class="nam">url</span> <span class="op">==</span> <span class="fst">f"</span><span class="fst">/books/</span><span class="op">{</span><span class="nam">book</span><span class="op">.</span><span class="nam">id</span><span class="op">}</span><span class="fst">/</span><span class="fst">"</span>&nbsp;</span><input type="checkbox" id="ctxs37"><span class="r"><label for="ctxs37" class="ctx">1 ctx</label></span><span class="ctxs">1b</span></p>
     <p class="pln"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t"><span class="key">def</span> <span class="nam">test_book_detail_resolve</span><span class="op">(</span><span class="nam">book</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs40" class="ctx">(empty)</label></span></p>
     <p class="pln"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">    <span class="str">"""/books/{book.id}/ should resolve to book_detail."""</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">    <span class="nam">url</span> <span class="op">=</span> <span class="str">f"/books/{book.id}/"</span>&nbsp;</span><input type="checkbox" id="ctxs42"><span class="r"><label for="ctxs42" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
+    <p class="run"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">    <span class="nam">url</span> <span class="op">=</span> <span class="fst">f"</span><span class="fst">/books/</span><span class="op">{</span><span class="nam">book</span><span class="op">.</span><span class="nam">id</span><span class="op">}</span><span class="fst">/</span><span class="fst">"</span>&nbsp;</span><input type="checkbox" id="ctxs42"><span class="r"><label for="ctxs42" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
     <p class="run"><span class="n"><a id="t43" href="#t43">43</a></span><span class="t">    <span class="key">assert</span> <span class="nam">resolve</span><span class="op">(</span><span class="nam">url</span><span class="op">)</span><span class="op">.</span><span class="nam">view_name</span> <span class="op">==</span> <span class="str">"book_detail"</span>&nbsp;</span><input type="checkbox" id="ctxs43"><span class="r"><label for="ctxs43" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
 </main>
 <footer>
@@ -145,7 +145,7 @@
             <a class="nav" href="z_bfce89227896c105_test_views_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.10">coverage.py v7.6.10</a>,
-            created at 2025-01-12 19:45 -0800
+            created at 2025-01-26 11:57 -0800
         </p>
     </div>
 </footer>
