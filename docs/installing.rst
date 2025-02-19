@@ -43,3 +43,6 @@ To add the pre-commit hooks, run the following command in the poetry shell:
 .. code-block:: console
 
    $ pre-commit install
+   $ pre-commit autoupdate
+
+After the repository has been successfully cloned and installed, see the :doc:`configuring` section for instructions to set up your environment and start the application.
