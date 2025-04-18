@@ -32,6 +32,10 @@ The following sessions are available to run via ``nox``:
 
 ::
 
+    * audit-3.13 -> Scan dependencies for insecure packages.
+    * audit-3.12 -> Scan dependencies for insecure packages.
+    * audit-3.11 -> Scan dependencies for insecure packages.
+    * audit-3.10 -> Scan dependencies for insecure packages.
     - coverage-3.13 -> Generate coverage report.
     - coverage-3.12 -> Generate coverage report.
     - coverage-3.11 -> Generate coverage report.
@@ -45,10 +49,6 @@ The following sessions are available to run via ``nox``:
     * pyright-3.11 -> Check types
     * pyright-3.12 -> Check types
     * pyright-3.13 -> Check types
-    * safety-3.13 -> Scan dependencies for insecure packages.
-    * safety-3.12 -> Scan dependencies for insecure packages.
-    * safety-3.11 -> Scan dependencies for insecure packages.
-    * safety-3.10 -> Scan dependencies for insecure packages.
     * tests-3.13 -> Run the test suite.
     * tests-3.12 -> Run the test suite.
     * tests-3.11 -> Run the test suite.
@@ -56,7 +56,7 @@ The following sessions are available to run via ``nox``:
 
     sessions marked with * are selected, sessions marked with - are skipped.
 
-The ``lint``, ``safety``, and ``tests`` are enabled to be run with ``nox -s tests``. Generating documentation, (e.g. ``nox -s docs-3.13``) need to be run explicitly.
+The ``lint``, ``audit``, and ``tests`` are enabled to be run with ``nox -s tests``. Generating documentation, (e.g. ``nox -s docs-3.13``) need to be run explicitly.
 
 Below are some example of ``nox`` commands run locally:
 
@@ -67,7 +67,7 @@ Below are some example of ``nox`` commands run locally:
    $ nox -s coverage-3.13
    $ nox -s docs-3.11
    $ nox -rs lint-3.10  (Use the 'r' flag to reuse existing session)
-   $ nox -s safety  (will run tests against all Python versions)
+   $ nox -s audit  (will run tests against all Python versions)
    $ nox -s tests
 
 Below are examples of ``nox`` tests run against the Docker container:
@@ -80,5 +80,5 @@ Below are examples of ``nox`` tests run against the Docker container:
    $ docker compose exec web nox -s coverage-3.12
    $ docker compose exec web nox -s docs-3.11
    $ docker compose exec web nox -rs lint-3.9  (Use the 'r' flag to reuse existing session)
-   $ docker compose exec web nox -s safety  (will run tests against all Python versions)
+   $ docker compose exec web nox -s audit  (will run tests against all Python versions)
    $ docker compose exec web nox -s tests
