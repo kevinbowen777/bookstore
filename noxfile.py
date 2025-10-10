@@ -89,7 +89,7 @@ def audit(session):
         "--desc",
         "--aliases",
         "--ignore-vuln",
-        "PYSEC-2025-49",
+        "GHSA-4xh5-x5gv-qwph",
     )
 
 
