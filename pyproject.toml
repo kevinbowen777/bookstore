@@ -2,7 +2,7 @@
 name = "bookstore"
 version = "0.3.3"
 description = "A online booksite created with the Django web framework"
-requires-python = ">=3.11.0, <3.14.0"
+requires-python = ">=3.11.0"
 dependencies = [
     "Django (==5.2.7)",
     "django-allauth (>=65.0, <66.0.0)",
@@ -40,6 +40,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Internet :: WWW/HTTP",
 ]
 
@@ -51,6 +52,9 @@ Documentation = "file:///docs/_build/index.html"
 
 [tool.poetry]
 package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11.0, <3.15.0"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = ">=5.0.0, <6.0.0"
@@ -135,7 +139,7 @@ ignore = ["docs/_build"]
 defineConstant = { DEBUG = true }
 stubPath = ""
 # The following may need to be modified when collaborating with others
-venv = "bookstore-JiWWEf8S-py3.13"
+venv = "bookstore-JiWWEf8S-py3.14"
 venvPath = "../../../venvs"
 # More portable venv config
 # venvPath = "."
@@ -157,11 +161,11 @@ reportUnnecessaryCast = "warning"
 reportUnnecessaryComparison = "error"
 reportUnnecessaryTypeIgnoreComment = "warning"
 
-pythonVersion = "3.13"
+pythonVersion = "3.14"
 pythonPlatform = "Linux"
 
 executionEnvironments = [
-  { root = ".", pythonVersion = "3.13", extraPaths = [ "accounts", "config", "pages" ] },
+  { root = ".", pythonVersion = "3.14", extraPaths = [ "accounts", "config", "pages" ] },
 ]
 
 [tool.pytest.ini_options]
@@ -184,7 +188,7 @@ unsafe-fixes = false
 line-length = 88
 indent-width = 4
 
-# Assume Python 3.13.x
+# Assume Python 3.14.x
 target-version = "py313"
 
 # Exclude a variety of commonly ignored directories.
