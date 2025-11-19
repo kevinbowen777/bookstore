@@ -1,11 +1,10 @@
-"""Settings for the kbowen-django-bookstore template project."""
+"""Settings for the django-bookstore template project."""
 
 from pathlib import Path
 
 from environs import Env
 
 # import socket  # Comment out if not using debug_toolbar
-
 
 env = Env()
 env.read_env()
@@ -18,7 +17,6 @@ SECRET_KEY = env.str("SECRET_KEY")
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
 ALLOWED_HOSTS = ["bookstore.cool", "localhost", "127.0.0.1"]
-
 
 # Application definition
 
@@ -85,6 +83,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
+# Database
 # Note: Set sqlite/dev URI in .env file
 DATABASES = {
     "default": {
@@ -96,7 +95,7 @@ DATABASES = {
         "USER": env.str("POSTGRES_USER", default="fakeuser"),
         "PASSWORD": env.str("POSTGRES_PASSWORD", "password"),
         "HOST": env.str("POSTGRES_HOST", "db"),
-        "PORT": env.int("POSTGRES_PORT", "5432"),
+        "PORT": env.int("POSTGRES_PORT", 5432),
     }
 }
 
@@ -138,7 +137,6 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = "/media/"
-# MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
 MEDIA_ROOT = BASE_DIR / "media"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
@@ -206,11 +204,6 @@ CRISPY_CLASS_CONVERTERS = {
     "passwordinput": "textinput textInput",
 }
 
-CSRF_TRUSTED_ORIGINS = [
-    # "https://kbowen-django-bookstore.herokuapp.com",
-    "http://localhost:8000",
-]
-
 ADMINS = [("Kevin Bowen", "kevinbowen@protonmail.com")]
 MANAGERS = ADMINS
 
@@ -249,6 +242,11 @@ LOGGING = {
             "handlers": ["console", "mail_admins"],
             "propagate": True,
         },
+        "werkzueg": {
+            "handlers": ["console"],
+            "level": "DEBUG",
+            "propagate": True,
+        },
     },
 }
 
@@ -258,4 +256,4 @@ LOGGING = {
 # hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 # INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # The following is for use locally:
-INTERNAL_IPS = ["127.0.0.1"]
+# INTERNAL_IPS = ["127.0.0.1"]
