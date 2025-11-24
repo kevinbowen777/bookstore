@@ -1,7 +1,8 @@
-# updated 20220904
+# updated 20251124
 # from: https://github.com/github/gitignore
 
 docker-compose-prod.yml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -16,7 +17,7 @@ cert.key
 
 # Distribution / packaging
 .Python
-build/
+# build/
 develop-eggs/
 dist/
 downloads/
@@ -50,6 +51,7 @@ pip-delete-this-directory.txt
 .coverage
 .coverage.*
 .cache
+.ruff_cache/
 nosetests.xml
 coverage.xml
 *.cover
@@ -81,7 +83,14 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+docs/html/
+docs/html/.doctrees/
+docs/html/_sources/
+docs/html/_sphinx_design_static/
+# docs/html/_static/
+docs/html/.buildinfo
+docs/html/.buildinfo.bak
+docs/html/objects.inv
 
 # PyBuilder
 .pybuilder/

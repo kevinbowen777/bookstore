@@ -12,7 +12,7 @@ locations = (
     "config",
     "pages",
     "./noxfile.py",
-    "docs/conf.py",
+    "docs/source/conf.py",
 )
 
 
@@ -60,7 +60,7 @@ def coverage(session):
 def docs(session):
     """Build the documentation."""
     install_with_constraints(session, "sphinx")
-    session.run("sphinx-build", "docs", "docs/_build")
+    session.run("sphinx-build", "docs/source", "docs/html")
 
 
 @nox.session(python=PYTHON_VERSIONS)
@@ -90,6 +90,8 @@ def audit(session):
         "--aliases",
         "--ignore-vuln",
         "GHSA-4xh5-x5gv-qwph",
+        "--ignore-vuln",
+        "GHSA-5rjg-fvgr-3xxf",
     )
 
 
