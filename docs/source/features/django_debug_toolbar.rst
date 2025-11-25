@@ -46,7 +46,7 @@ Resources
       "debug_toolbar.middleware.DebugToolbarMiddleware",
       ]
 
-   c. Add the following lines at the bottom of config/settings.py.:
+   c. Add the following lines at the bottom of ``config/settings.py``.:
 
    .. code:: text
 
@@ -58,7 +58,7 @@ Resources
       # The following is for use locally:
       INTERNAL_IPS = ["127.0.0.1"]
 
-3. Update URLconf:
+3. Update URLconf/``config/urls.py``:
 
    .. code:: text
 

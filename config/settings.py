@@ -1,4 +1,4 @@
-"""Settings for the django-bookstore template project."""
+"""Settings for the bookstore template project."""
 
 from pathlib import Path
 

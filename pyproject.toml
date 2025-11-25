@@ -9,13 +9,13 @@ dependencies = [
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=4.1, <5.0)",
     "whitenoise (>=6.9.0, <7.0.0)",
-    "psycopg[binary] (==3.2.12)",
+    "psycopg[binary] (==3.2.13)",
     "Pillow (>=12.0, <13.0)",
     "gunicorn (>=23.0.0, <24.0.0)",
     # crispy-bootstrap4 uses calver, so version is unclamped
     "crispy-bootstrap4 (>=2024.10)",
     "django-crispy-forms (>=2.5, <2.6)",
-    "django-countries (>=8.1.1, <9.0)",
+    "django-countries (>=8.2, <9.0)",
 ]
 authors = [
     { name = "Kevin Bowen", email = "kevin.bowen@gmail.com" },
@@ -48,7 +48,7 @@ classifiers = [
 Homepage = "https://github.com/kevinbowen777/bookstore.git"
 Changelog = "https://github.com/kevinbowen777/bookstore/NEWS"
 Repository = "https://github.com/kevinbowen777/bookstore.git"
-Documentation = "file:///docs/_build/index.html"
+Documentation = "file:///docs/html/index.html"
 
 [tool.poetry]
 package-mode = false
@@ -57,7 +57,7 @@ package-mode = false
 python = ">=3.11.0, <3.15.0"
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = ">=5.0.0, <6.0.0"
+django-debug-toolbar = ">=6.1, <7.0"
 pre-commit = ">=4.0, <5.0"
 ruff = ">=0.8, <1.0"
 nox = "2025.11.12"
@@ -135,7 +135,7 @@ exclude = [
     "**/__pycache__",
     "**/migrations",
 ]
-ignore = ["docs/_build"]
+ignore = ["docs/html"]
 defineConstant = { DEBUG = true }
 stubPath = ""
 # The following may need to be modified when collaborating with others
@@ -189,7 +189,7 @@ line-length = 88
 indent-width = 4
 
 # Assume Python 3.14.x
-target-version = "py313"
+target-version = "py314"
 
 # Exclude a variety of commonly ignored directories.
 exclude = [
