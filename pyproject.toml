@@ -4,12 +4,12 @@ version = "0.3.4"
 description = "A online booksite created with the Django web framework"
 requires-python = ">=3.11.0"
 dependencies = [
-    "Django (==5.2.8)",
+    "Django (==5.2.9)",
     "django-allauth (>=65.0, <66.0.0)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=4.1, <5.0)",
     "whitenoise (>=6.9.0, <7.0.0)",
-    "psycopg[binary] (==3.2.13)",
+    "psycopg[binary] (==3.3.1)",
     "Pillow (>=12.0, <13.0)",
     "gunicorn (>=23.0.0, <24.0.0)",
     # crispy-bootstrap4 uses calver, so version is unclamped
