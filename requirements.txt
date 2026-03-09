@@ -31,9 +31,9 @@ django-extensions==4.1 ; python_version >= "3.11" and python_full_version < "3.1
 environs==14.6.0 ; python_version >= "3.11" and python_full_version < "3.15.0" \
     --hash=sha256:ed2767588deb503209ffe4dd9bb2b39311c2e4e7e27ce2c64bf62ca83328d068 \
     --hash=sha256:f8fb3d6c6a55872b0c6db077a28f5a8c7b8984b7c32029613d44cef95cfc0812
-gunicorn==23.0.0 ; python_version >= "3.11" and python_full_version < "3.15.0" \
-    --hash=sha256:ec400d38950de4dfd418cff8328b2c8faed0edb0d517d3394e457c317908ca4d \
-    --hash=sha256:f014447a0101dc57e294f6c18ca6b40227a4c90e9bdb586042628030cba004ec
+gunicorn==25.1.0 ; python_version >= "3.11" and python_full_version < "3.15.0" \
+    --hash=sha256:1426611d959fa77e7de89f8c0f32eed6aa03ee735f98c01efba3e281b1c47616 \
+    --hash=sha256:d0b1236ccf27f72cfe14bce7caadf467186f19e865094ca84221424e839b8b8b
 marshmallow==4.2.2 ; python_version >= "3.11" and python_full_version < "3.15.0" \
     --hash=sha256:084a9466111b7ec7183ca3a65aed758739af919fedc5ebdab60fb39d6b4dc121 \
     --hash=sha256:ba40340683a2d1c15103647994ff2f6bc2c8c80da01904cbe5d96ee4baa78d9f
