@@ -9,7 +9,7 @@
 
 </div>
 
-- A basic bookstore application built using the Django 5.2.x web framework
+- A basic bookstore application built using the Django 6.x web framework
 
 ### Table of Contents
 
@@ -31,7 +31,7 @@
     - User registration with email verification & social(GitHub) login using [django-allauth](https://pypi.org/project/django-allauth/)
     - [Bootstrap4](https://pypi.org/project/django-bootstrap4/) & [crispy-forms](https://pypi.org/project/django-crispy-forms/) decorations
     - Customizable user profile pages with bio, profile pic, & [country flags](https://pypi.python.org/pypi/django-countries)
-    - For additional links to package resources used in this repository, see the [Package Index](docs/package_index.md)
+    - For additional links to package resources used in this repository, see the [Package Index](docs/source/features/package_index.rst)
 - Dev/testing
     - Basic module testing templates
     - [Coverage](https://kevinbowen777.github.io/bookstore/) reports on web
