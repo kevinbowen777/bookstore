@@ -1,6 +1,5 @@
-# updated 20251124
+# updated 20221117
 # from: https://github.com/github/gitignore
-
 docker-compose-prod.yml
 
 # Byte-compiled / optimized / DLL files
@@ -83,7 +82,6 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/html/
 docs/html/.doctrees/
 docs/html/_sources/
 docs/html/_sphinx_design_static/
