@@ -27,6 +27,38 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+bookstore 0.3.7 (2026-09-02)
+============================
+
+Contributor-facing changes
+--------------------------
+
+-  (`#642 <https://github.com/kevinbowen777/bookstore/642>`_): Initial zizmor remediation. Pin GitHub actions to hashes.
+
+-  (`#645 <https://github.com/kevinbowen777/bookstore/645>`_): Update testing to Python 3.14.7, 3.13.15, and 3.12.14
+
+-  (`#645 <https://github.com/kevinbowen777/bookstore/645>`_): Update django-allauth to 65.19.1
+
+-  (`#645 <https://github.com/kevinbowen777/bookstore/645>`_): Update nox to 2026.8.10
+
+-  (`#645 <https://github.com/kevinbowen777/bookstore/645>`_): Update django-debug-toolbar to 7.1.0
+
+-  (`#649 <https://github.com/kevinbowen777/bookstore/649>`_): Update django-allauth to 65.19.2
+
+-  (`#649 <https://github.com/kevinbowen777/bookstore/649>`_): Update Trove classifier
+
+-  (`#649 <https://github.com/kevinbowen777/bookstore/649>`_): Update nox to 2026.8.17
+
+-  (`#649 <https://github.com/kevinbowen777/bookstore/649>`_): Update psycopg to 3.3.5
+
+-  (`#649 <https://github.com/kevinbowen777/bookstore/649>`_): Update django-debug-toolbar to 8.0.0
+
+
+New features
+------------
+
+-  (`#649 <https://github.com/kevinbowen777/bookstore/649>`_): Upgrade to Django 6.1
+
 bookstore 0.3.6 (2026-08-08)
 ============================
 
