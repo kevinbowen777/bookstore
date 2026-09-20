@@ -5,11 +5,11 @@ description = "A online booksite created with the Django web framework"
 requires-python = ">=3.12.0"
 dependencies = [
     "Django (==6.1.1)",
-    "django-allauth (==65.19.3)",
+    "django-allauth (==65.19.4)",
     "environs[django] (==15.2.0)",
     "django-extensions (==4.1.0)",
     "whitenoise (==6.12.0)",
-    "psycopg[binary] (==3.3.5)",
+    "psycopg[binary] (==3.3.6)",
     "Pillow (==12.3.0)",
     "gunicorn (==26.2.0)",
     "crispy-bootstrap4 (==2026.2)",
@@ -44,7 +44,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/kevinbowen777/bookstore.git"
-Changelog = "https://github.com/kevinbowen777/bookstore/NEWS"
+Changelog = "https://github.com/kevinbowen777/bookstore/CHANGELOG.rst"
 Repository = "https://github.com/kevinbowen777/bookstore.git"
 Documentation = "file:///docs/html/index.html"
 
@@ -75,6 +75,7 @@ furo = "2025.12.19"
 django-types = ">=0.24.0, <0.25.0"
 pip-audit = "^2.9.0"
 towncrier = "26.9.0"
+myst-parser = "5.1.0"
 
 [tool.poetry.requires-plugins]
 poetry-plugin-export = ">=1.10.0"
@@ -276,7 +277,7 @@ docstring-code-line-length = "dynamic"
 
 [tool.towncrier]
 directory = "changelog/"
-filename = "CHANGELOG.rst"
+filename = "docs/source/changelog.rst"
 
 title_format = "bookstore {version} ({project_date})"
 issue_format = "`#{issue} <https://github.com/kevinbowen777/bookstore/{issue}>`_"

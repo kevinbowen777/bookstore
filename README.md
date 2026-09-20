@@ -131,6 +131,13 @@
 
 ---
 
+### Contributions
+
+You are free to fork this repository and modify as you see fit. See
+[CONTRIBUTING](https://github.com/kevinbowen777/bookstore/CONTRIBUTING) for details on reporting issues, etc.
+
+---
+
 ### Reporting Bugs
 
    Visit the [Issues page](https://github.com/kevinbowen777/bookstore/issues)
