@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# run - Set of commands to run against Django projects running on the 
-#           local machine. Make sure the the alias `alias run='./run' is 
+# run - Set of commands to run against Django projects running on the
+#           local machine. Make sure the the alias `alias run='./run' is
 #           included in your .bashrc
 
 set -o errexit
@@ -115,7 +115,7 @@ function nox:pyright {
 
 function nox:audit {
   # Check code/packages for vulnerabilites against Safety db
-  # cmd nox -s audt-3.14 "${@}"
+  # cmd nox -s audit-3.14 "${@}"
   nox -s audit-3.14 "${@}"
 }
 
@@ -132,7 +132,7 @@ function nox:tests {
 
 function nox:re-tests {
   # Run tests for all currently supported Python versions
-  nox -rs tests-3.12 tests-3.13 tests.3.14 "${@}"
+  nox -rs tests-3.12 tests-3.13 tests-3.14 "${@}"
 }
 
 function nox:current {
@@ -188,6 +188,14 @@ function reqs:all {
   # poetry export -f requirements.txt --without-hashes -o requirements.txt
   poetry export --output requirements.txt
   poetry export --with=dev --output requirements-dev.txt
+}
+
+function reqs:pre {
+  # Export production package requirements
+  # Run pre-commit updates
+  poetry export --output requirements.txt
+  poetry export --with=dev --output requirements-dev.txt
+  poetry run pre-commit autoupdate
 }
 
 function ruff:check {
