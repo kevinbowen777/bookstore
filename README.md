@@ -18,6 +18,7 @@
 - [Testing](#testing)
 - [Application Demo](#application-demo)
 - [Screenshots](#screenshots)
+- [Contributing](#contributing)
 - [Reporting Bugs](#reporting-bugs)
 
 ---
@@ -131,7 +132,7 @@
 
 ---
 
-### Contributions
+### Contributing
 
 You are free to fork this repository and modify as you see fit. See
 [CONTRIBUTING](https://github.com/kevinbowen777/bookstore/CONTRIBUTING) for details on reporting issues, etc.

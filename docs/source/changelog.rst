@@ -27,6 +27,30 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+bookstore 0.3.9 (2026-10-08)
+============================
+
+Security updated
+----------------
+
+-  (`#657 <https://github.com/kevinbowen777/bookstore/657>`_): Update django-allauth to 65.19.7
+
+-  (`#658 <https://github.com/kevinbowen777/bookstore/658>`_): Update Django to 6.1.2
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#657 <https://github.com/kevinbowen777/bookstore/657>`_): Update testing for Python 3.14.8, 3.13.16, 3.12.15
+
+-  (`#657 <https://github.com/kevinbowen777/bookstore/657>`_): Update werkzeug to 3.1.9
+
+-  (`#657 <https://github.com/kevinbowen777/bookstore/657>`_): Update djlint to 1.46.4
+
+-  (`#659 <https://github.com/kevinbowen777/bookstore/659>`_): Fix Factory DeprecationWarning
+
+-  (`#660 <https://github.com/kevinbowen777/bookstore/660>`_): Fix CentralCovContextWarning
+
 bookstore 0.3.8 (2026-09-20)
 ============================
 
