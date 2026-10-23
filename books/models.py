@@ -1,4 +1,5 @@
 import uuid
+from typing import ClassVar
 
 from django.contrib.auth import get_user_model
 from django.db import models
@@ -23,11 +24,11 @@ class Book(models.Model):
     objects = models.Manager()
 
     class Meta:
-        indexes = [
+        indexes: ClassVar[list] = [
             models.Index(fields=["id"], name="id_index"),
         ]
-        ordering = ["title"]
-        permissions = [
+        ordering: ClassVar[list[str]] = ["title"]
+        permissions: ClassVar[list[tuple]] = [
             ("special_status", "Can read all books"),
         ]
 

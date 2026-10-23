@@ -26,7 +26,7 @@ def test_book_list_view(rf):
     assertContains(response, "Our Book list")
 
 
-def test_book_detail_view(rf, book):  # noqa:F811
+def test_book_detail_view(rf, book):
     # Get the request
     url = reverse("book_detail", kwargs={"pk": book.pk})
     request = rf.get(url)
@@ -37,7 +37,7 @@ def test_book_detail_view(rf, book):  # noqa:F811
     assertContains(response, book.title)
 
 
-def test_book_create_view(rf, book, admin_user):  # noqa:F811
+def test_book_create_view(rf, book, admin_user):
     form_data = {
         "title": book.title,
         "author": book.author,
@@ -73,7 +73,7 @@ def test_book_list_contains_2_books(rf, book):
 """
 
 
-def test_detail_contains_book_data(rf, book):  # noqa:F811
+def test_detail_contains_book_data(rf, book):
     # Make a request for our new book
     url = reverse("book_detail", kwargs={"pk": book.pk})
     request = rf.get(url)
@@ -97,11 +97,11 @@ def test_book_create_form_valid(rf, admin_user):
     request.user = admin_user
     response = BookCreateView.as_view()(request)
     # Get the book based on the name
-    book = Book.objects.get(title="Programming Python")  # noqa:F811
+    book = Book.objects.get(title="Programming Python")
     # Test that the book matches our form
     assert response.status_code == 302
     assert book.author == "Mark Lutz"
-    assert book.price == 69.00
+    assert book.price == 69.00  # ruff: ignore[float-equality-comparison]
     assert book.creator == admin_user
 
 
@@ -140,7 +140,7 @@ def test_book_update(rf, admin_user, book):
     request = rf.post(url, form_data)
     request.user = admin_user
     callable_obj = BookUpdateView.as_view()
-    response = callable_obj(request, pk=book.id)  # noqa:F841
+    response = callable_obj(request, pk=book.id)
 
     # Check that the book has been changed
     book.refresh_from_db()
@@ -160,7 +160,7 @@ def test_sitemap(client, ten_books):
 
 
 """
-def test_review_create_form_valid(rf, admin_user, book, review):  # noqa:F811
+def test_review_create_form_valid(rf, admin_user, book, review):
     form_data = {
         "review": "This is a great book",
     }
@@ -171,7 +171,7 @@ def test_review_create_form_valid(rf, admin_user, book, review):  # noqa:F811
     response = callable_obj(request)  # noqa:F841
     # response = callable_obj(request, book.id)  # noqa:F841
     # Get the book based on the name
-    review = Review.objects.get(review="This is a great book")  # noqa:F811
+    review = Review.objects.get(review="This is a great book")
     # Test that the book matches our form
     book.refresh_from_db()
     assert response.status_code == 302

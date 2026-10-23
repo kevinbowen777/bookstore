@@ -27,6 +27,38 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+bookstore 0.3.10 (2026-10-22)
+=============================
+
+Security updated
+----------------
+
+-  (`#662 <https://github.com/kevinbowen777/bookstore/662>`_): Update certifi to 2026.10.19
+
+-  (`#662 <https://github.com/kevinbowen777/bookstore/662>`_): Update pip to 26.2.2
+
+-  (`#662 <https://github.com/kevinbowen777/bookstore/662>`_): Update .python-versions 3.14.9, 3.13.17
+
+-  (`#662 <https://github.com/kevinbowen777/bookstore/662>`_): Update pillow to 13.0.0
+
+-  (`#662 <https://github.com/kevinbowen777/bookstore/662>`_): Update django-allauth to 65.20.1
+
+
+Improved documentation
+----------------------
+
+-  (`#662 <https://github.com/kevinbowen777/bookstore/662>`_): Remove legacy license classifier
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#662 <https://github.com/kevinbowen777/bookstore/662>`_): Update ruff rules & fix reported errors
+
+-  (`#662 <https://github.com/kevinbowen777/bookstore/662>`_): Update nox to 2026.10.20
+
+-  (`#662 <https://github.com/kevinbowen777/bookstore/662>`_): Update djlint to 1.47.0
+
 bookstore 0.3.9 (2026-10-08)
 ============================
 
