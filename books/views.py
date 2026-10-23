@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 from django.urls import reverse
@@ -14,7 +16,7 @@ from .models import Book, Review
 
 class BookCreateView(LoginRequiredMixin, CreateView):
     model = Book
-    fields = [
+    fields: ClassVar[list[str]] = [
         "title",
         "author",
         "description",
@@ -45,7 +47,7 @@ class BookListView(ListView):
 
 class BookUpdateView(LoginRequiredMixin, UpdateView):
     model = Book
-    fields = [
+    fields: ClassVar[list[str]] = [
         "title",
         "author",
         "description",
@@ -59,16 +61,18 @@ class BookUpdateView(LoginRequiredMixin, UpdateView):
 
 class ReviewCreateView(LoginRequiredMixin, CreateView):
     model = Review
-    fields = ["book", "review"]
+    fields: ClassVar[list[str]] = ["book", "review"]
 
     def get_initial(self):
-        initial_data = super(ReviewCreateView, self).get_initial()
+        # initial_data = super(ReviewCreateView, self).get_initial()
+        initial_data = super().get_initial()
         book = Book.objects.get(id=self.kwargs["book_id"])
         initial_data["book"] = book
         return initial_data
 
     def get_context_data(self):
-        context = super(ReviewCreateView, self).get_context_data()
+        # context = super(ReviewCreateView, self).get_context_data()
+        context = super().get_context_data()
         book = Book.objects.get(id=self.kwargs["book_id"])
         context["book"] = book
         context["title"] = "Add a new review"
@@ -89,7 +93,7 @@ class ReviewDetailView(LoginRequiredMixin, DetailView):
 
 class ReviewUpdateView(LoginRequiredMixin, UpdateView):
     model = Review
-    fields = ["book", "review"]
+    fields: ClassVar[list[str]] = ["book", "review"]
     action = "Update"
 
     def get_success_url(self):

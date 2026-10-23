@@ -43,13 +43,13 @@ def ten_books(user):
     for book_id in range(10):
         book_id += 1
         Book.objects.create(
-            title="A Tiny Test Bookstore Post {0}".format(book_id),
+            title=f"A Tiny Test Bookstore Post {book_id}",
             author=user,
             price=19.95,
             publisher="Grove Press",
             # tags="dummy, test, django, bookstore",
             # slug="2023/9/18/a-tiny-bookstore-test-{0}/".format(book_id),
-            description="Some bookstore content {0}".format(book_id),
+            description=f"Some bookstore content {book_id}",
         )
         books.append(book)
     return books

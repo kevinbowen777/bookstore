@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django.contrib import admin
 
 from .models import Book, Review
@@ -9,7 +11,7 @@ class ReviewInline(admin.TabularInline):
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    list_display = [
+    list_display: ClassVar[list[str]] = [
         "title",
         "author",
         "description",
@@ -17,9 +19,9 @@ class BookAdmin(admin.ModelAdmin):
         "publisher",
         "pubdate",
     ]
-    search_fields = ["title", "author"]
-    ordering = ["title", "author"]
-    inlines = [
+    search_fields: ClassVar[list[str]] = ["title", "author"]
+    ordering: ClassVar[list[str]] = ["title", "author"]
+    inlines: ClassVar[list[str]] = [
         ReviewInline,
     ]
 
@@ -28,5 +30,5 @@ admin.site.register(Review)
 
 
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ["review", "date", "creator"]
-    search_fields = ["creator", "review"]
+    list_display: ClassVar[list[str]] = ["review", "date", "creator"]
+    search_fields: ClassVar[list[str]] = ["creator", "review"]
