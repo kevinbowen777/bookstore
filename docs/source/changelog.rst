@@ -27,6 +27,38 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+bookstore 0.3.11 (2026-11-08)
+=============================
+
+Security updated
+----------------
+
+-  (`#664 <https://github.com/kevinbowen777/bookstore/664>`_): Update Django to 6.1.3
+
+-  (`#664 <https://github.com/kevinbowen777/bookstore/664>`_): Update psycopg to 3.3.8
+
+-  (`#664 <https://github.com/kevinbowen777/bookstore/664>`_): Update django-allauth to 65.21.1
+
+-  (`#664 <https://github.com/kevinbowen777/bookstore/664>`_): Update .python-version with 3.14.10, 3.13.18, 3.12.16
+
+-  (`#664 <https://github.com/kevinbowen777/bookstore/664>`_): Update pip to 26.3
+
+
+Improved documentation
+----------------------
+
+-  (`#666 <https://github.com/kevinbowen777/bookstore/666>`_): Update GitHub actions with zizmor recommendations
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#664 <https://github.com/kevinbowen777/bookstore/664>`_): Update coverage to 7.17.2
+
+-  (`#664 <https://github.com/kevinbowen777/bookstore/664>`_): Update djlint to 1.49.10
+
+-  (`#665 <https://github.com/kevinbowen777/bookstore/665>`_): Upgrade BitBucket remote repo URL
+
 bookstore 0.3.10 (2026-10-22)
 =============================
 
